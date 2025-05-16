@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계절愛(애) 양평 스낵 박스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 transition-ready">
+    <!-- 네비게이션 바 -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">                
+                <a href="index.html" class="font-bold text-xl flex items-center">
+                      계절愛 양평 스낵 박스
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-green-200 transition highlight">홈</a>
+                    <a href="problems.html" class="hover:text-green-200 transition highlight">현황 및 문제점</a>
+                    <a href="solutions.html" class="hover:text-green-200 transition highlight">개선방안</a>
+                    <a href="effects.html" class="hover:text-green-200 transition highlight">기대효과</a>
+                    <a href="implementation.html" class="hover:text-green-200 transition highlight">조치사항</a>
+                    <a href="trend_analysis.html" class="hover:text-green-200 transition highlight">트렌드 분석</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-green-800 pb-4">
+            <a href="index.html" class="block px-4 py-2 text-white hover:bg-green-600">홈</a>
+            <a href="problems.html" class="block px-4 py-2 text-white hover:bg-green-600">현황 및 문제점</a>
+            <a href="solutions.html" class="block px-4 py-2 text-white hover:bg-green-600">개선방안</a>
+            <a href="effects.html" class="block px-4 py-2 text-white hover:bg-green-600">기대효과</a>
+            <a href="implementation.html" class="block px-4 py-2 text-white hover:bg-green-600">조치사항</a>
+            <a href="trend_analysis.html" class="block px-4 py-2 text-white hover:bg-green-600">트렌드 분석</a>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="relative hero-section">
+        <div class="bg-gradient-to-r from-green-700 to-green-500 text-white py-24 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 fade-in">
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                            사계절 즐기는 양평의 맛, <br>
+                            <span class="text-yellow-300">계절愛(애) 양평 스낵 박스</span>
+                        </h1>
+                        <p class="text-xl">
+                            양평의 특산물로 만든 전통 간식 수수부꾸미를 현대적으로 재해석하여
+                            사계절 관광 활성화와 지역 경제 발전에 기여합니다.
+                        </p>
+                        <div class="flex space-x-4">
+                             <a href="solutions.html" class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-700 transition btn hover-effect">
+                                제안 내용 보기
+                            </a>
+                           <a href="https://notebooklm.google.com/notebook/d570b66e-f459-41a0-a542-cf3eae7477d8/audio" class="px-6 py-3 bg-white text-green-700 font-semibold rounded-lg shadow-md hover:bg-green-100 transition btn hover-effect">
+                                음성으로 듣기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block relative fade-in">
+                        <!-- 계절 이미지 컨테이너 -->
+                        <div class="seasonal-container w-full h-96 relative rounded-lg overflow-hidden shadow-2xl">
+                            <!-- 봄 이미지 -->
+                            <div class="season-image spring absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('img/1spring_snack.png'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <!--div class="bg-white bg-opacity-80 rounded-lg p-6 transform rotate-2 shadow-lg">
+                                        <h3 class="text-pink-600 font-bold text-xl">봄 - 딸기 수수부꾸미</h3>
+                                        <p class="text-gray-700">양평 딸기의 상큼함을 담은 봄철 대표 간식</p>
+                                    </div-->
+                                </div>
+                            </div>
+                            <!-- 여름 이미지 -->
+                            <div class="season-image summer absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('img/2summer_snack.png'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <!--div class="bg-white bg-opacity-80 rounded-lg p-6 transform -rotate-1 shadow-lg">
+                                        <h3 class="text-blue-600 font-bold text-xl">여름 - 표고버섯 수수부꾸미</h3>
+                                        <p class="text-gray-700">용문산 표고버섯의 풍미를 담은 여름철 간식</p>
+                                    </div-->
+                                </div>
+                            </div>
+                            <!-- 가을 이미지 -->
+                            <div class="season-image fall absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('img/3fall_snack.png'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <!--div class="bg-white bg-opacity-80 rounded-lg p-6 transform rotate-1 shadow-lg">
+                                        <h3 class="text-orange-600 font-bold text-xl">가을 - 영양 수수부꾸미</h3>
+                                        <p class="text-gray-700">단풍잎 모양으로 가을의 정취를 담은 간식</p>
+                                    </div-->
+                                </div>
+                            </div>
+                            <!-- 겨울 이미지 -->
+                            <div class="season-image winter absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('img/4winter_snack.png'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <!--div class="bg-white bg-opacity-80 rounded-lg p-6 transform -rotate-2 shadow-lg">
+                                        <!--h3 class="text-gray-600 font-bold text-xl">겨울 - 한우 육포 수수부꾸미</h3>
+                                        <p class="text-gray-700">양평 한우의 깊은 맛을 담은 겨울철 간식</p-->
+                                    </div-->
+
+                                </div>
+                            </div>
+                        </div>
+<br>
+    <p class="text-xs text-white-600 mt-2">* 사진자료는 이해를 돕기 위해 AI로 생성한 참고용 이미지로 자세한 것은 내용을 참고해 주시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);">
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">제안 개요</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">양평군의 풍부한 지역 특산물과 사계절 관광 자원을 활용한 계절별 대표 간식 개발 프로젝트입니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="fade-in">
+                    <img src="img/yangpyeong_overview.png" alt="양평 전경" class="rounded-lg shadow-lg img-hover">
+                </div>
+                <div class="space-y-6 fade-in">
+                    <p class="text-gray-700">
+                        본 제안은 데이터 분석을 통해 도출된 양평 관광객과 청년층의 먹거리 선호도를 바탕으로, 양평군의 계절적 특성과 지역 특산물을 활용한 계절별 대표 간식 개발 아이디어입니다.
+                    </p>
+                    <p class="text-gray-700">
+                        '계절愛(애) 양평 스낵 박스'는 전통 간식인 수수부꾸미를 현대적으로 재해석하여 양평의 사계절 매력을 담은 시즌별 간식 세트로, 관광지에서 즐길 수 있는 현장형 간식과 선물용 패키지로 구성되어 양평의 맛과 이야기를 전달하는 대표 먹거리 브랜드입니다.
+                    </p>
+                    <div class="bg-green-50 border-l-4 border-green-600 p-4">
+                        <p class="font-medium">
+                            양평군의 핵심 정책 방향인 <span class="text-green-700 font-bold">'환경, 관광, 건강, 안전'</span>과 연계되어 지속가능한 지역 발전에 기여하는 관광 콘텐츠로 기획되었습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 계절별 간식 미리보기 -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">계절별 양평 스낵 박스</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 봄 카드 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2 card-hover fade-in">
+                    <div class="h-40 relative bg-cover bg-center" style="background-image: url('img/1spring_snack.png');">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white bg-pink-500 bg-opacity-80 px-4 py-1 rounded shadow-md">봄</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-pink-600 mb-2">양평 봄꽃 디저트 박스</h4>
+                        <p class="text-gray-700 mb-4">
+                            딸기 생크림 수수부꾸미를 중심으로 꽃잎 모양의 디자인으로 봄의 상큼함을 담았습니다.
+                        </p>
+                        <a href="solutions.html#spring" class="text-pink-600 font-medium hover:underline highlight">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 여름 카드 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2 card-hover fade-in">
+                    <div class="h-40 relative bg-cover bg-center" style="background-image: url('img/2summer_snack.png');">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white bg-blue-500 bg-opacity-80 px-4 py-1 rounded shadow-md">여름</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-blue-600 mb-2">양평 계곡 힐링 스낵 박스</h4>
+                        <p class="text-gray-700 mb-4">
+                            표고버섯 크림치즈 수수부꾸미와 함께 시원한 과일 파르페로 여름 더위를 식혀줍니다.
+                        </p>
+                        <a href="solutions.html#summer" class="text-blue-600 font-medium hover:underline highlight">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 가을 카드 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2 card-hover fade-in">
+                    <div class="h-40 relative bg-cover bg-center" style="background-image: url('img/3fall_snack.png');">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white bg-orange-500 bg-opacity-80 px-4 py-1 rounded shadow-md">가을</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-orange-600 mb-2">양평 단풍길 간식 박스</h4>
+                        <p class="text-gray-700 mb-4">
+                            표고 영양 수수부꾸미와 군고구마 크림빵으로 가을의 풍요로움을 담았습니다.
+                        </p>
+                        <a href="solutions.html#fall" class="text-orange-600 font-medium hover:underline highlight">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 겨울 카드 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2 card-hover fade-in">
+                    <div class="h-40 relative bg-cover bg-center" style="background-image: url('img/4winter_snack.png');">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white bg-gray-500 bg-opacity-80 px-4 py-1 rounded shadow-md">겨울</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-600 mb-2">양평 설경 간식 박스</h4>
+                        <p class="text-gray-700 mb-4">
+                            한우 육포 수수부꾸미와 고구마 호떡으로 겨울철 따뜻한 간식을 제공합니다.
+                        </p>
+                        <a href="solutions.html#winter" class="text-gray-600 font-medium hover:underline highlight">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 기대효과 -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">핵심 기대효과</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm fade-in card-hover">
+                    <div class="text-4xl mb-4 icon-pulse">🌱</div>
+                    <h3 class="text-xl font-bold mb-4">사계절 관광 활성화</h3>
+                    <p>계절별 특화 간식 개발로 비수기 관광객 <span class="counter" data-target="15">15</span>% 이상 증가 및 체류 시간 연장 효과</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm fade-in card-hover">
+                    <div class="text-4xl mb-4 icon-pulse">🍓</div>
+                    <h3 class="text-xl font-bold mb-4">지역 특산물 가치 상승</h3>
+                    <p>지역 특산물의 부가가치 <span class="counter" data-target="3">3</span>배 증대 및 농가 소득 <span class="counter" data-target="5">5</span>% 이상 향상 효과</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm fade-in card-hover">
+                    <div class="text-4xl mb-4 icon-pulse">💼</div>
+                    <h3 class="text-xl font-bold mb-4">일자리 창출</h3>
+                    <p>직접 고용 <span class="counter" data-target="50">50</span>명 이상, 간접 고용 <span class="counter" data-target="200">200</span>명 이상의 지역 일자리 창출 효과</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="effects.html" class="inline-block px-6 py-3 bg-white text-green-700 font-bold rounded-lg hover:bg-green-100 transition btn hover-effect">
+                    모든 기대효과 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 실행계획 미리보기 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4 fade-in">실행 계획</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">
+                전통 간식인 수수부꾸미를 현대적으로 재해석한 양평 대표 간식의 개발 및 상용화를 위한 12개월 로드맵입니다.
+            </p>
+            
+            <div class="relative">
+                <!-- 타임라인 선 -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-200"></div>
+                
+                <div class="space-y-12">
+                    <!-- 1단계 -->
+                    <div class="relative flex items-center justify-between md:justify-start flex-col md:flex-row timeline-item">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">1~3개월</h3>
+                                <p class="text-gray-700">상품 기획 및 R&D</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center relative z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+                    
+                    <!-- 2단계 -->
+                    <div class="relative flex items-center justify-between md:justify-start flex-col md:flex-row timeline-item">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right hidden md:block"></div>
+                        
+                        <div class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center relative z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">3~6개월</h3>
+                                <p class="text-gray-700">시제품 개발 및 브랜드 디자인</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3단계 -->
+                    <div class="relative flex items-center justify-between md:justify-start flex-col md:flex-row timeline-item">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">6~9개월</h3>
+                                <p class="text-gray-700">생산 시스템 구축 및 마케팅 전략 수립</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center relative z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+                    
+                    <!-- 4단계 -->
+                    <div class="relative flex items-center justify-between md:justify-start flex-col md:flex-row timeline-item">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right hidden md:block"></div>
+                        
+                        <div class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center relative z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">9~12개월</h3>
+                                <p class="text-gray-700">시범 판매 및 피드백 수집, 시장 확대</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="implementation.html" class="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition btn hover-effect">
+                    전체 실행 계획 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 fade-in">양평군 군정발전 국민 제안</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto fade-in">
+                양평의 사계절 매력을 담은 특색 있는 간식으로 관광객과 지역 주민 모두가 행복한 
+                지속가능한 지역 발전에 함께해주세요.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 fade-in">
+                <a href="problems.html" class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition btn hover-effect">
+                    현황 및 문제점 살펴보기
+                </a>
+                <a href="solutions.html" class="px-6 py-3 bg-white text-green-700 font-bold rounded-lg border border-green-600 hover:bg-green-50 transition btn hover-effect">
+                    개선방안 자세히 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">계절愛 양평 스낵 박스</h3>
+                    <p class="text-gray-400">
+                        양평의 특산물과 전통 간식이 만나 
+                        사계절 내내 즐길 수 있는 양평 대표 간식 프로젝트
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">페이지</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">홈</a></li>
+                        <li><a href="problems.html" class="hover:text-white transition">현황 및 문제점</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition">개선방안</a></li>
+                        <li><a href="effects.html" class="hover:text-white transition">기대효과</a></li>
+                        <li><a href="implementation.html" class="hover:text-white transition">조치사항</a></li>
+                        <li><a href="trend_analysis.html" class="hover:text-white transition">트렌드 분석</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">관련 링크</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">양평군청</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 관광</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 특산물</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">연락처</h3>
+                    <address class="not-italic text-gray-400">
+                        경기도 양평군<br>
+                        양평읍 군청앞길 2<br>
+                        양평군청 본관 2층<br>
+                        기획예산담당관(미래전략팀)
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>2025년 제1회 양평군 군정발전 국민 제안 공모전</p>
+                <p class="mt-2">© 2025 계절愛 양평 스낵 박스 프로젝트. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

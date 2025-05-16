@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트렌드 분석 - 계절愛(애) 양평 스낵 박스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 transition-ready">
+    <!-- 네비게이션 바 -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-xl">계절愛 양평 스낵 박스</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-green-200 transition highlight">홈</a>
+                    <a href="problems.html" class="hover:text-green-200 transition highlight">현황 및 문제점</a>
+                    <a href="solutions.html" class="hover:text-green-200 transition highlight">개선방안</a>
+                    <a href="effects.html" class="hover:text-green-200 transition highlight">기대효과</a>
+                    <a href="implementation.html" class="hover:text-green-200 transition highlight">조치사항</a>
+                    <a href="trend_analysis.html" class="hover:text-green-200 transition highlight font-bold border-b-2 border-white">트렌드 분석</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-green-800 pb-4">
+            <a href="index.html" class="block px-4 py-2 text-white hover:bg-green-600">홈</a>
+            <a href="problems.html" class="block px-4 py-2 text-white hover:bg-green-600">현황 및 문제점</a>
+            <a href="solutions.html" class="block px-4 py-2 text-white hover:bg-green-600">개선방안</a>
+            <a href="effects.html" class="block px-4 py-2 text-white hover:bg-green-600">기대효과</a>
+            <a href="implementation.html" class="block px-4 py-2 text-white hover:bg-green-600">조치사항</a>
+            <a href="trend_analysis.html" class="block px-4 py-2 text-white hover:bg-green-600 bg-green-600">트렌드 분석</a>
+        </div>
+    </nav>
+
+    <!-- 페이지 헤더 -->
+    <header class="bg-gradient-to-r from-purple-600 to-purple-400 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">양평군 트렌드 분석</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                양평군 관련 키워드의 검색 트렌드 데이터를 분석하여 
+                청년 정책과 대표 간식 개발을 위한 인사이트를 도출합니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- 분석 개요 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">📊 데이터 분석 개요</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    네이버 데이터랩의 검색어 트렌드 API를 활용하여 2023년 5월부터 2025년 4월까지의 2년간 양평군 관련 키워드 검색 트렌드를 분석한 결과입니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="fade-in">
+                    <img src="img/data_analysis_overview.svg" alt="데이터 분석 개요" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="space-y-6 fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800">분석 방법론</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">▶</span>
+                            <span><strong>분석 기간:</strong> 2023년 5월 ~ 2025년 4월(최근 2년)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">▶</span>
+                            <span><strong>분석 도구:</strong> 네이버 데이터랩 검색어 트렌드 API</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">▶</span>
+                            <span><strong>분석 방식:</strong> 키워드 그룹별 검색 트렌드 변화 분석, 계절별/시기별 인기 키워드 분석</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">▶</span>
+                            <span><strong>데이터 범위:</strong> 전체 연령 및 청년층(20-39세) 별도 분석</span>
+                        </li>
+                    </ul>
+                    <div class="bg-purple-50 border-l-4 border-purple-600 p-4">
+                        <p class="font-medium">
+                            총 12개의 키워드 그룹에 대한 분석을 통해 양평군 군정발전 국민제안 공모전의 두 가지 주제(청년 정책, 대표 간식)에 대한 데이터 기반 인사이트를 도출했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 fade-in">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-t-4 border-purple-500">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">양평 지역별 키워드</h3>
+                    <div class="space-y-2">
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="font-medium">양평지역1: 양평, 양서, 강상, 옥천, 서종</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="font-medium">양평지역2: 양동, 지평, 용문, 청운, 단월</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-t-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">양평 관광/먹거리 키워드</h3>
+                    <div class="space-y-2">
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="font-medium">관광명소1: 두물, 쉬자, 들꽃, 석산, 수목원</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="font-medium">관광명소2: 힐링, 수영장, 계곡, 산책, 둘레길</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="font-medium">양평음식1: 맛집, 카페, 빵집, 식당, 음식</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="font-medium">양평음식2: 한우, 딸기, 표고, 잡곡, 고추</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-t-4 border-green-500">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">청년 관련 키워드</h3>
+                    <div class="space-y-2">
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="font-medium">청년일자1: 청년, 창업, 일자리, 지원, 정착</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="font-medium">청년일자2: 농업, 귀농, 인턴, 취업, 알바</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="font-medium">청년주거1: 임대, 월세, 전세, 주택, 원룸</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="font-medium">청년주거2: 셰어, 공유, 거주, 생활, 홈</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 양평 지역 트렌드 분석 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">🗓️ 양평 지역 검색 트렌드 분석</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    양평 지역별, 계절별 검색 트렌드를 분석하여 관광 패턴과 지역 인기도 변화를 파악했습니다.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <div class="chart-container">
+                    <canvas id="regionTrendChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 fade-in">
+                <div class="bg-white rounded-lg shadow p-6 border-t-4 border-pink-400">
+                    <h3 class="text-xl font-bold text-pink-500 mb-4">봄</h3>
+                    <p class="text-gray-700 mb-2"><strong>양평지역1:</strong> 57.69</p>
+                    <p class="text-gray-700"><strong>양평지역2:</strong> 10.68</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <p class="text-gray-600 text-sm italic">봄철 양평, 양서, 강상, 옥천, 서종 지역의 검색량이 높게 나타남</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 border-t-4 border-blue-400">
+                    <h3 class="text-xl font-bold text-blue-500 mb-4">여름</h3>
+                    <p class="text-gray-700 mb-2"><strong>양평지역1:</strong> 58.49</p>
+                    <p class="text-gray-700"><strong>양평지역2:</strong> 10.64</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <p class="text-gray-600 text-sm italic">여름철에 가장 높은 검색량을 보이며, 특히 7월에 검색량 급증</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 border-t-4 border-orange-400">
+                    <h3 class="text-xl font-bold text-orange-500 mb-4">가을</h3>
+                    <p class="text-gray-700 mb-2"><strong>양평지역1:</strong> 42.66</p>
+                    <p class="text-gray-700"><strong>양평지역2:</strong> 10.17</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <p class="text-gray-600 text-sm italic">가을철 검색량은 여름 대비 약 27% 감소, 관광 비수기 시작</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 border-t-4 border-gray-400">
+                    <h3 class="text-xl font-bold text-gray-500 mb-4">겨울</h3>
+                    <p class="text-gray-700 mb-2"><strong>양평지역1:</strong> 42.43</p>
+                    <p class="text-gray-700"><strong>양평지역2:</strong> 9.52</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <p class="text-gray-600 text-sm italic">겨울철은 연중 가장 낮은 검색량을 보이는 시기로 관광 비수기</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-600 shadow-md fade-in">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">주요 인사이트</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">▶</span>
+                        <span>양평 지역은 <strong class="text-purple-700">여름과 봄철</strong>에 검색량이 증가하는 계절적 특성이 뚜렷함</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">▶</span>
+                        <span>특히 7월(2023년 7월, 2024년 7월)에 검색량이 급증하는 현상이 관찰됨</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">▶</span>
+                        <span>양평, 양서, 강상, 옥천, 서종 지역의 검색 인기도가 용문 등 다른 지역보다 약 5배 높음</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">▶</span>
+                        <span>가을/겨울철 비수기 활성화를 위한 계절별 특화 콘텐츠 필요</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 관광 및 먹거리 트렌드 분석 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">🏞️ 양평 관광명소 및 먹거리 트렌드 분석</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    양평 관광명소와 먹거리 관련 키워드의 검색 트렌드를 분석하여 관광객의 관심사와 선호도를
+                    파악했습니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">관광명소 키워드 트렌드</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="tourismTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">먹거리 키워드 트렌드</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="foodTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 fade-in">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">관광명소 키워드 인기도</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">관광명소1 (두물, 쉬자, 들꽃, 석산, 수목원)</span>
+                                <span class="text-sm font-medium text-gray-700">13.79</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-blue-600 rounded-full h-4" style="width: 14%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">관광명소2 (힐링, 수영장, 계곡, 산책, 둘레길)</span>
+                                <span class="text-sm font-medium text-gray-700">37.12</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-blue-600 rounded-full h-4" style="width: 37%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong>주요 인사이트:</strong> "힐링", "수영장", "계곡", "산책", "둘레길" 키워드가 특히 여름철에 인기를 끌며, 여름 성수기 집중 현상이 뚜렷합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">먹거리 키워드 인기도</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">양평음식1 (맛집, 카페, 빵집, 식당, 음식)</span>
+                                <span class="text-sm font-medium text-gray-700">84.83</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-green-600 rounded-full h-4" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">양평음식2 (한우, 딸기, 표고, 잡곡, 고추)</span>
+                                <span class="text-sm font-medium text-gray-700">7.43</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-green-600 rounded-full h-4" style="width: 7%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong>주요 인사이트:</strong> 양평 관련 먹거리 검색에서 "맛집", "카페", "빵집" 같은 일반적 키워드가 압도적으로 높으며, 특산물 관련 검색은 상대적으로 낮습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">관광과 먹거리의 상관관계</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">상관관계</th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">양평음식1 (맛집, 카페)</th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">양평음식2 (한우, 딸기)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">관광명소1 (두물, 쉬자)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-green-50 font-medium">0.4536 (중간 정도의 상관관계)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.1254 (약한 상관관계)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">관광명소2 (힐링, 수영장)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-green-100 font-medium">0.6998 (높은 상관관계)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-red-50 font-medium">-0.4428 (음의 상관관계)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600 shadow-md fade-in">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">주요 인사이트</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">▶</span>
+                        <span>관광명소와 맛집/카페 검색이 강한 양의 상관관계를 보이는 반면, 특산물 관련 검색은 상대적으로 낮음</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">▶</span>
+                        <span>여름철 관광 관련 검색이 압도적으로 높으며, 특히 7월, 8월에 정점</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">▶</span>
+                        <span>간식 키워드 중에서는 "츄러스", "와플", "스낵", "떡", "빵"과 같은 구체적인 메뉴가 높은 인기를 보임</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">▶</span>
+                        <span>특산물 활용 간식 개발은 현재 검색 비중은 낮지만 틈새시장으로 성장 가능성이 있음</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 청년 관련 트렌드 분석 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">👨‍👩‍👧‍👦 청년 일자리 및 주거 트렌드 분석</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    청년층의 일자리 및 주거 관련 키워드 검색 트렌드를 분석하여 청년 정책 수립의 방향성을 도출했습니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">청년 일자리 키워드 트렌드</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="youthJobTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">청년 주거 키워드 트렌드</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="youthHousingTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 fade-in">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">청년 일자리 키워드 인기도</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">청년일자1 (청년, 창업, 일자리, 지원, 정착)</span>
+                                <span class="text-sm font-medium text-gray-700">52.93</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-green-600 rounded-full h-4" style="width: 53%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">청년일자2 (농업, 귀농, 인턴, 취업, 알바)</span>
+                                <span class="text-sm font-medium text-gray-700">79.92</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-green-600 rounded-full h-4" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong>주요 인사이트:</strong> 청년층은 "농업", "귀농", "인턴", "취업", "알바"와 같은 구체적인 일자리 키워드에 관심이 매우 높습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">청년 주거 키워드 인기도</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">청년주거1 (임대, 월세, 전세, 주택, 원룸)</span>
+                                <span class="text-sm font-medium text-gray-700">32.31</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-indigo-600 rounded-full h-4" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium text-gray-700">청년주거2 (셰어, 공유, 거주, 생활, 홈)</span>
+                                <span class="text-sm font-medium text-gray-700">41.97</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-4">
+                                <div class="bg-indigo-600 rounded-full h-4" style="width: 42%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-indigo-50 rounded-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong>주요 인사이트:</strong> 청년 주거 키워드 중에서는 "셰어", "공유", "거주", "생활", "홈" 관련 트렌드가 전통적인 주거 키워드보다 높은 검색 인기도를 보입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">일자리와 주거의 상관관계</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">상관관계</th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">청년주거1 (임대, 월세)</th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">청년주거2 (셰어, 공유)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">청년일자1 (청년, 창업)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-green-50 font-medium">0.5904 (중간 정도의 상관관계)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-red-50 font-medium">-0.1544 (약한 음의 상관관계)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">청년일자2 (농업, 귀농)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-green-100 font-medium">0.8287 (매우 높은 상관관계)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.1205 (약한 상관관계)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-600 shadow-md fade-in">
+                <h3 class="text-xl font-bold text-green-800 mb-4">주요 인사이트</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-green-600 mr-2">▶</span>
+                        <span>임대/월세 관련 주거 키워드와 농업/귀농 관련 일자리 키워드 간의 높은 상관관계는 청년들의 정착과 관련된 복합적 니즈를 시사함</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 mr-2">▶</span>
+                        <span>청년층은 구체적인 일자리 키워드에 관심이 매우 높으며, 특히 농업 및 귀농 관련 검색이 두드러짐</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 mr-2">▶</span>
+                        <span>셰어하우스나 공유 주거 관련 검색이 전통적인 주거 형태보다 높은 인기를 보이며, 특히 겨울철에 검색이 급증함</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 mr-2">▶</span>
+                        <span>일자리와 주거를 통합적으로 제공하는 정책이 청년층의 니즈에 효과적으로 대응할 수 있음</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 종합 인사이트 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800">🔍 종합 인사이트 및 제안 방향성</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    데이터 분석을 통해 도출된 인사이트를 바탕으로 청년 정책과 대표 간식 분야의 제안 방향성을 제시합니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in border-t-4 border-green-600">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">청년친화도시 양평을 위한 정책 제안 방향</h3>
+                    <div class="space-y-6">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-green-700 mb-2">1. 농업 연계 청년 일자리 기회 확대</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>농업, 귀농 관련 키워드가 청년 일자리 검색에서 높은 비중을 차지함</li>
+                                <li>청년 농업인 지원 프로그램 개발 및 정착 지원 강화 필요</li>
+                                <li>계절별 트렌드에 맞춘 농업 체험 프로그램 개발 가능성 탐색</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-green-700 mb-2">2. 공유 주거 모델 개발</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>셰어, 공유, 홈 등의 키워드가 전통적 주거 키워드보다 높은 검색 인기도 보임</li>
+                                <li>청년 공유 주택 모델 개발, 셰어하우스 지원 정책 고려</li>
+                                <li>겨울철 공유 주거 수요 증가 현상에 대응한 계절별 지원 프로그램 필요</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-green-700 mb-2">3. 일자리-주거 연계 패키지 정책</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>청년 일자리(특히 농업)와 주거 키워드 간의 높은 상관관계 활용</li>
+                                <li>일자리와 주거를 함께 제공하는 통합 지원 프로그램 개발</li>
+                                <li>특히 봄~여름 시즌에 집중된 양평 관광 산업 연계 일자리 창출 가능성</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">양평 대표 간식 아이디어 제안 방향</h3>
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-blue-700 mb-2">1. 관광-먹거리 연계 전략</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>관광명소와 맛집/카페 검색의 높은 상관관계 활용</li>
+                                <li>특히 여름철 관광객이 증가하는 시기에 맞춘 대표 간식 개발</li>
+                                <li>관광지 근처 카페, 빵집 등과 연계한 프로모션 전략 수립</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-blue-700 mb-2">2. 청년 선호 간식 트렌드 반영</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>"츄러스", "와플", "스낵", "떡", "빵" 등 청년층 선호 키워드 활용</li>
+                                <li>전통적인 "떡"과 현대적인 "와플" 등의 결합 아이디어 모색</li>
+                                <li>SNS에서 인기를 끌 수 있는 비주얼과 포장에 주목</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-blue-700 mb-2">3. 특산물 활용 간식 개발</h4>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>현재 특산물 관련 검색 비중이 낮은 점에 주목한 틈새시장 공략</li>
+                                <li>한우, 딸기, 표고, 잡곡, 고추 등 양평 특산물을 활용한 특색있는 간식 개발</li>
+                                <li>지역 스토리텔링과 결합한 마케팅 전략 수립</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-purple-50 rounded-lg p-8 border-l-4 border-purple-600 shadow-lg fade-in">
+                <h3 class="text-2xl font-bold text-purple-800 mb-6 text-center">결론 및 제안 제출 방향</h3>
+                <p class="text-gray-700 mb-6">
+                    본 데이터 분석을 통해 양평군 군정발전과 관련된 다양한 트렌드와 인사이트를 도출했습니다. 특히 청년 정책과 대표 간식 분야에서 데이터 기반의 제안 방향을 설정할 수 있었습니다.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <h4 class="font-bold text-lg text-purple-700">제안서 작성 시 고려 요소</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span><strong>데이터 기반 현황 분석:</strong> 객관적인 트렌드 데이터 제시</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span><strong>계절적 특성 반영:</strong> 여름철 관광 증가, 겨울철 공유 주거 수요 증가 등</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span><strong>상관관계 활용:</strong> 관광-맛집, 일자리-주거 등의 시너지 전략</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span><strong>차별화 전략:</strong> 특산물 활용 등 현재 관심도는 낮지만 잠재력 있는 분야 발굴</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="font-bold text-lg text-purple-700">데이터 분석 한계점</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span>검색 트렌드가 실제 관심도나 행동을 완벽하게 반영하지 않을 수 있음</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span>데이터 범위가 제한적이므로 추가적인 현장 조사 필요</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span>계절별 변동성이 높아 장기적인 트렌드 파악에 한계가 있음</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">◆</span>
+                                <span>제안 개발 시 추가적인 검증과 타당성 조사 필요</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold">계절愛 양평 스낵 박스</h3>
+                    <p class="text-gray-400 mt-2">2025년 제1회 양평군 군정발전 국민 제안 공모전</p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="index.html" class="hover:text-green-400 transition">홈</a>
+                    <a href="problems.html" class="hover:text-green-400 transition">현황 및 문제점</a>
+                    <a href="solutions.html" class="hover:text-green-400 transition">개선방안</a>
+                    <a href="effects.html" class="hover:text-green-400 transition">기대효과</a>
+                    <a href="implementation.html" class="hover:text-green-400 transition">조치사항</a>
+                    <a href="trend_analysis.html" class="hover:text-green-400 transition">트렌드 분석</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 계절愛 양평 스낵 박스. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 차트 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 지역 트렌드 차트
+            const regionCtx = document.getElementById('regionTrendChart').getContext('2d');
+            new Chart(regionCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [
+                        {
+                            label: '양평지역1 (양평, 양서, 강상)',
+                            data: [42, 43, 52, 55, 58, 57, 65, 58, 48, 45, 42, 40],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.3
+                        },
+                        {
+                            label: '양평지역2 (양동, 지평, 용문)',
+                            data: [9, 10, 10, 11, 11, 10, 12, 10, 10, 10, 9, 9],
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '양평 지역별 월간 검색 트렌드 (2023-2025 평균)',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '검색 인기도 (상대적 수치)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '월별'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 관광 트렌드 차트
+            const tourismCtx = document.getElementById('tourismTrendChart').getContext('2d');
+            new Chart(tourismCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['봄', '여름', '가을', '겨울'],
+                    datasets: [
+                        {
+                            label: '관광명소1 (두물, 쉬자, 들꽃)',
+                            data: [15.19, 16.66, 11.09, 10.45],
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: '관광명소2 (힐링, 수영장, 계곡)',
+                            data: [48.06, 55.81, 19.50, 21.54],
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '계절별 관광명소 키워드 검색 인기도'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // 먹거리 트렌드 차트
+            const foodCtx = document.getElementById('foodTrendChart').getContext('2d');
+            new Chart(foodCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['봄', '여름', '가을', '겨울'],
+                    datasets: [
+                        {
+                            label: '양평음식1 (맛집, 카페, 빵집)',
+                            data: [87.19, 92.17, 78.95, 79.77],
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: '양평음식2 (한우, 딸기, 표고)',
+                            data: [6.28, 6.49, 8.95, 8.32],
+                            backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '계절별 먹거리 키워드 검색 인기도'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // 청년 일자리 차트 
+            const youthJobCtx = document.getElementById('youthJobTrendChart').getContext('2d');
+            new Chart(youthJobCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [
+                        {
+                            label: '청년일자1 (청년, 창업, 일자리)',
+                            data: [45, 48, 50, 55, 58, 60, 57, 54, 50, 48, 45, 47],
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            tension: 0.3
+                        },
+                        {
+                            label: '청년일자2 (농업, 귀농, 인턴)',
+                            data: [75, 77, 80, 83, 85, 81, 77, 75, 80, 82, 78, 76],
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '청년 일자리 키워드 월간 검색 트렌드'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // 청년 주거 차트
+            const youthHousingCtx = document.getElementById('youthHousingTrendChart').getContext('2d');
+            new Chart(youthHousingCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [
+                        {
+                            label: '청년주거1 (임대, 월세, 전세)',
+                            data: [32, 32, 33, 33, 33, 32, 32, 32, 31, 32, 32, 33],
+                            borderColor: 'rgba(142, 68, 173, 1)',
+                            backgroundColor: 'rgba(142, 68, 173, 0.2)',
+                            tension: 0.3
+                        },
+                        {
+                            label: '청년주거2 (셰어, 공유, 거주)',
+                            data: [55, 60, 35, 30, 32, 35, 35, 33, 40, 45, 50, 58],
+                            borderColor: 'rgba(241, 196, 15, 1)',
+                            backgroundColor: 'rgba(241, 196, 15, 0.2)',
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '청년 주거 키워드 월간 검색 트렌드'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- 메인 스크립트 -->
+    <script src="script.js"></script>
+</body>
+</html>

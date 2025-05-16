@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현황 및 문제점 - 계절愛(애) 양평 스낵 박스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 transition-ready">
+    <!-- 네비게이션 바 -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-xl">계절愛 양평 스낵 박스</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-green-200 transition highlight">홈</a>
+                    <a href="problems.html" class="hover:text-green-200 transition highlight font-bold border-b-2 border-white">현황 및 문제점</a>
+                    <a href="solutions.html" class="hover:text-green-200 transition highlight">개선방안</a>
+                    <a href="effects.html" class="hover:text-green-200 transition highlight">기대효과</a>
+                    <a href="implementation.html" class="hover:text-green-200 transition highlight">조치사항</a>
+                    <a href="trend_analysis.html" class="hover:text-green-200 transition highlight">트렌드 분석</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-green-800 pb-4">
+            <a href="index.html" class="block px-4 py-2 text-white hover:bg-green-600">홈</a>
+            <a href="problems.html" class="block px-4 py-2 text-white hover:bg-green-600 bg-green-600">현황 및 문제점</a>
+            <a href="solutions.html" class="block px-4 py-2 text-white hover:bg-green-600">개선방안</a>
+            <a href="effects.html" class="block px-4 py-2 text-white hover:bg-green-600">기대효과</a>
+            <a href="implementation.html" class="block px-4 py-2 text-white hover:bg-green-600">조치사항</a>
+            <a href="trend_analysis.html" class="block px-4 py-2 text-white hover:bg-green-600">트렌드 분석</a>
+        </div>
+    </nav>
+
+    <!-- 페이지 헤더 -->
+    <header class="bg-gradient-to-r from-red-600 to-red-400 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4 fade-in">현황 및 문제점</h1>
+            <p class="text-xl max-w-3xl mx-auto fade-in">
+                양평군 관광과 특산물 활용에 관한 데이터 분석을 통해 
+                도출된 현황과 문제점을 살펴봅니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- 소개 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto fade-in">
+                <p class="text-gray-700 mb-6">
+                    양평군은 서울과 가까운 거리에 자연관광자원서 많은 매력을 가진 경기도 내에서 관광명소로 꼽히는 지역입니다. 관광객들은 주로 북한강, 남한강 합류 지점인 두물머리, 용문산 등 자연경관을 찾아 방문하고 있습니다. 
+                </p>
+                <p class="text-gray-700 mb-6">
+                    또한 양평군은 친환경농업 중심지로서, 유기농 딸기, 한우, 표고버섯 등 우수한 특산물이 많습니다. 계절별로 다양한 농산물과 관광 컨텐츠를 보유하고 있지만, 이러한 자원을 효과적으로 연계하고 활용하는 데 있어 몇 가지 현실적인 문제점들이 존재합니다.
+                </p>
+                <p class="text-gray-700">
+                    데이터 분석 결과, 다음과 같은 4가지 핵심 문제점이 확인되었습니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문제점 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <!-- 문제점 1: 방문객 계절적 편중 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 fade-in">
+                    <div class="bg-red-600 text-white p-4">
+                        <h2 class="text-xl font-bold">1. 방문객 계절적 편중 현상</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="mb-6 space-y-4">
+                                    <p class="text-gray-700">
+                                        네이버 데이터랩 분석 결과, 양평 지역의 계절별 평균 검색 인기도는 봄 57.69, 여름 58.49, 가을 42.66, 겨울 42.43으로 봄/여름철에 관광 수요가 집중되고 있습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        특히 7월에 검색량이 급증하는 현상이 뚜렷하게 관찰되었으며, 여름철 수영장, 계곡과 같은 키워드의 인기도가 가을, 겨울철에 비해 현저히 높게 나타났습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        계절적 편중으로 인해 지역 관광 서비스의 품질 불균형이 발생하고, 비수기 지역 경제 활성화에 한계가 있습니다.
+                                    </p>
+                                </div>
+                                <div class="bg-red-50 border-l-4 border-red-600 p-4 fade-in">
+                                    <p class="font-medium text-gray-700">
+                                        <span class="text-red-600 font-bold">문제점:</span> 봄/여름철 관광객 집중으로 인한 성수기 과밀화 및 비수기(가을/겨울) 관광 침체 현상
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bg-gray-100 p-4 rounded-lg">
+                                    <h3 class="text-lg font-bold text-gray-800 mb-4">계절별 양평 지역 검색 인기도</h3>
+                                    <div class="relative h-64 mb-4">
+                                        <!-- 계절 레이블 -->
+                                        <div class="absolute bottom-0 left-0 h-10 w-1/4 bg-pink-400 mx-1"></div>
+                                        <div class="absolute bottom-0 left-1/4 h-10 w-1/4 bg-blue-400 mx-1"></div>
+                                        <div class="absolute bottom-0 left-1/2 h-7 w-1/4 bg-orange-400 mx-1"></div>
+                                        <div class="absolute bottom-0 left-3/4 h-7 w-1/4 bg-gray-400 mx-1"></div>
+                                        
+                                        <!-- 계절별 데이터 -->
+                                        <div class="absolute bottom-10 left-0 h-36 w-1/4 bg-pink-500 mx-1 flex items-end justify-center">
+                                            <span class="text-white font-bold mb-2">57.69</span>
+                                        </div>
+                                        
+                                        <div class="absolute bottom-10 left-1/4 h-40 w-1/4 bg-blue-500 mx-1 flex items-end justify-center">
+                                            <span class="text-white font-bold mb-2">58.49</span>
+                                        </div>
+                                        
+                                        <div class="absolute bottom-7 left-1/2 h-28 w-1/4 bg-orange-500 mx-1 flex items-end justify-center">
+                                            <span class="text-white font-bold mb-2">42.66</span>
+                                        </div>
+                                        
+                                        <div class="absolute bottom-7 left-3/4 h-28 w-1/4 bg-gray-500 mx-1 flex items-end justify-center">
+                                            <span class="text-white font-bold mb-2">42.43</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-around text-sm text-gray-700">
+                                        <div>봄</div>
+                                        <div>여름</div>
+                                        <div>가을</div>
+                                        <div>겨울</div>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2 italic">
+                                    * 2023년 5월부터 2025년 4월까지의 2년간 검색 데이터 분석 결과
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 문제점 2: 지역 특산물 인지도 저조 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 fade-in">
+                    <div class="bg-red-600 text-white p-4">
+                        <h2 class="text-xl font-bold">2. 지역 특산물 인지도와 활용도 저조</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="bg-gray-100 p-4 rounded-lg">
+                                    <h3 class="text-lg font-bold text-gray-800 mb-4">양평 먹거리 키워드 인기도 비교</h3>
+                                    <div class="relative h-64 mb-4">
+                                        <!-- 데이터 바 -->
+                                        <div class="absolute bottom-0 left-0 h-56 w-1/2 bg-green-500 mx-1 flex items-end justify-center">
+                                            <span class="text-white font-bold mb-2">84.83</span>
+                                        </div>
+                                        
+                                        <div class="absolute bottom-0 left-1/2 h-5 w-1/2 bg-green-300 mx-1 flex items-end justify-center">
+                                            <span class="text-gray-800 font-bold mb-2">7.43</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-around text-sm text-gray-700">
+                                        <div>일반 먹거리<br>(맛집, 카페, 빵집 등)</div>
+                                        <div>특산물<br>(한우, 딸기, 표고 등)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-6 space-y-4">
+                                    <p class="text-gray-700">
+                                        데이터 분석 결과, 양평 먹거리 검색에서 '맛집', '카페', '빵집' 등 일반 먹거리 키워드의 평균 검색 인기도는 84.83으로 매우 높은 반면, '한우', '딸기', '표고버섯' 등 특산물 키워드의 인기도는 7.43에 그쳤습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        역사적으로 조선시대 『세종실록지리지』에는 양평의 특산물로 대추, 석이버섯, 느타리, 지초(영지버섯) 등이 기록되어 있으나, 이러한 지역 특산물의 가치와 인지도가 현대에는 충분히 활용되지 못하고 있습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        품질 좋은 특산물임에도 불구하고 이를 활용한 차별화된 간식 개발이 미흡하여 양평 특산물의 브랜드 가치가 관광 상품으로 연결되지 못하고 있습니다.
+                                    </p>
+                                </div>
+                                <div class="bg-red-50 border-l-4 border-red-600 p-4 fade-in">
+                                    <p class="font-medium text-gray-700">
+                                        <span class="text-red-600 font-bold">문제점:</span> 양평 특산물에 대한 낮은 인지도와 간식 형태로의 가공·활용 부족
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 문제점 3: 관광지-먹거리 연계성 부족 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 fade-in">
+                    <div class="bg-red-600 text-white p-4">
+                        <h2 class="text-xl font-bold">3. 관광지-먹거리 연계성 부족</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="mb-6 space-y-4">
+                                    <p class="text-gray-700">
+                                        관광명소(힐링, 수영장, 계곡 등 키워드)와 맛집/카페 검색의 상관계수는 0.6998로 높은 상관관계를 보이지만, 대부분 정식 식사 위주로 특색 있는 간식이 부족합니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        관광객의 이동 편의성과 즉시 소비 가능한 포장 간식에 대한 니즈가 충족되지 못하고 있으며, 관광지와 식당 간의 물리적 거리가 멀어 관광객이 식사를 위해 이동해야 하는 불편함이 있습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        양평 5일장, 용문 5일장 등에서 판매되는 전통 먹거리(수수부꾸미, 녹두전 등)가 있으나 현대적 감각으로 재해석되거나 관광 기념품으로 발전시킨 사례가 미흡합니다.
+                                    </p>
+                                </div>
+                                <div class="bg-red-50 border-l-4 border-red-600 p-4 fade-in">
+                                    <p class="font-medium text-gray-700">
+                                        <span class="text-red-600 font-bold">문제점:</span> 관광지 내 즉시 소비 가능한 특색 있는 간식 부족과 관광-먹거리 간 물리적·내용적 연계성 약화
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+                                    <img src="img/454397_362995_3922.jpg" alt="관광지와 먹거리 연계 부족 도식" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="font-bold text-lg mb-2">관광지-먹거리 연계성 현황</h3>
+                                        <ul class="space-y-2 text-sm text-gray-700">
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span>관광지 방문 후 식사를 위해 평균 <span class="font-bold">7.5km</span> 이동 필요</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span>주요 관광지 내 포장 간식 판매점 <span class="font-bold">3개 미만</span></span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span>관광지 내 간식점 운영시간 제한적 (평균 3시간)</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span>양평 특산물 활용 포장 간식 종류 <span class="font-bold">5종 미만</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 문제점 4: 청년층 선호 간식 트렌드 미반영 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="bg-red-600 text-white p-4">
+                        <h2 class="text-xl font-bold">4. 청년층 선호 간식 트렌드 미반영</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="bg-gray-100 p-4 rounded-lg">
+                                    <h3 class="text-lg font-bold text-gray-800 mb-4">청년층 선호 간식 키워드 검색 트렌드</h3>
+                                    <div class="space-y-4">
+                                        <div class="relative pt-1">
+                                            <div class="flex mb-2 items-center justify-between">
+                                                <div>
+                                                    <span class="text-xs font-semibold inline-block text-pink-600">
+                                                        츄러스
+                                                    </span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="text-xs font-semibold inline-block text-pink-600">
+                                                        82.1%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
+                                                <div style="width:82%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="relative pt-1">
+                                            <div class="flex mb-2 items-center justify-between">
+                                                <div>
+                                                    <span class="text-xs font-semibold inline-block text-yellow-600">
+                                                        와플
+                                                    </span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="text-xs font-semibold inline-block text-yellow-600">
+                                                        79.2%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-yellow-200">
+                                                <div style="width:79%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-500"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="relative pt-1">
+                                            <div class="flex mb-2 items-center justify-between">
+                                                <div>
+                                                    <span class="text-xs font-semibold inline-block text-blue-600">
+                                                        스낵
+                                                    </span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="text-xs font-semibold inline-block text-blue-600">
+                                                        77.9%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+                                                <div style="width:78%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="relative pt-1">
+                                            <div class="flex mb-2 items-center justify-between">
+                                                <div>
+                                                    <span class="text-xs font-semibold inline-block text-red-600">
+                                                        떡
+                                                    </span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="text-xs font-semibold inline-block text-red-600">
+                                                        75.6%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
+                                                <div style="width:76%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="relative pt-1">
+                                            <div class="flex mb-2 items-center justify-between">
+                                                <div>
+                                                    <span class="text-xs font-semibold inline-block text-purple-600">
+                                                        빵
+                                                    </span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="text-xs font-semibold inline-block text-purple-600">
+                                                        86.8%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
+                                                <div style="width:87%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-6 space-y-4">
+                                    <p class="text-gray-700">
+                                        청년층이 선호하는 간식 키워드(츄러스, 와플, 스낵, 떡, 빵)의 평균 검색 인기도는 80.32로 매우 높은 것으로 나타났지만, 양평 지역에는 이러한 트렌드가 반영된 간식이 부족합니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        특히 MZ세대는 SNS에서 공유할 수 있는 비주얼과 스토리텔링을 중요시하는데, 양평의 간식은 이러한 요소가 부족하여 관광 경쟁력 약화 요인으로 작용하고 있습니다.
+                                    </p>
+                                    <p class="text-gray-700">
+                                        청년층의 공유 주거 관련 키워드가 겨울철에 급증하는 현상이 관찰되었으나, 겨울철 청년 타겟 관광 상품이 개발되지 않아 비수기 관광 활성화 기회를 놓치고 있습니다.
+                                    </p>
+                                </div>
+                                <div class="bg-red-50 border-l-4 border-red-600 p-4 fade-in">
+                                    <p class="font-medium text-gray-700">
+                                        <span class="text-red-600 font-bold">문제점:</span> 청년층(MZ세대)의 트렌디한 간식 선호도와 SNS 공유 문화를 반영한 양평 특색 간식 부재
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">문제 해결을 위한 제안</h2>
+                <p class="text-gray-600 mb-8">
+                    위와 같은 문제점들을 해결하고 양평군의 관광 활성화와 지역 경제 발전에 기여할 수 있는
+                    계절별 대표 간식 개발 아이디어를 제시합니다.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="solutions.html" class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition btn hover-effect">
+                        개선방안 보기
+                    </a>
+                    <a href="trend_analysis.html" class="px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition btn hover-effect">
+                        트렌드 분석 데이터 확인
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">계절愛 양평 스낵 박스</h3>
+                    <p class="text-gray-400">
+                        양평의 특산물과 전통 간식이 만나 
+                        사계절 내내 즐길 수 있는 양평 대표 간식 프로젝트
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">페이지</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">홈</a></li>
+                        <li><a href="problems.html" class="hover:text-white transition">현황 및 문제점</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition">개선방안</a></li>
+                        <li><a href="effects.html" class="hover:text-white transition">기대효과</a></li>
+                        <li><a href="implementation.html" class="hover:text-white transition">조치사항</a></li>
+                        <li><a href="trend_analysis.html" class="hover:text-white transition">트렌드 분석</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">관련 링크</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">양평군청</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 관광</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 특산물</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">연락처</h3>
+                    <address class="not-italic text-gray-400">
+                        경기도 양평군<br>
+                        양평읍 군청앞길 2<br>
+                        양평군청 본관 2층<br>
+                        기획예산담당관(미래전략팀)
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>2025년 제1회 양평군 군정발전 국민 제안 공모전</p>
+                <p class="mt-2">© 2025 계절愛 양평 스낵 박스 프로젝트. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개선방안 - 계절愛(애) 양평 스낵 박스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 transition-ready">
+    <!-- 네비게이션 바 -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-xl">계절愛 양평 스낵 박스</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-green-200 transition highlight">홈</a>
+                    <a href="problems.html" class="hover:text-green-200 transition highlight">현황 및 문제점</a>
+                    <a href="solutions.html" class="hover:text-green-200 transition highlight font-bold border-b-2 border-white">개선방안</a>
+                    <a href="effects.html" class="hover:text-green-200 transition highlight">기대효과</a>
+                    <a href="implementation.html" class="hover:text-green-200 transition highlight">조치사항</a>
+                    <a href="trend_analysis.html" class="hover:text-green-200 transition highlight">트렌드 분석</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-green-800 pb-4">
+            <a href="index.html" class="block px-4 py-2 text-white hover:bg-green-600">홈</a>
+            <a href="problems.html" class="block px-4 py-2 text-white hover:bg-green-600">현황 및 문제점</a>
+            <a href="solutions.html" class="block px-4 py-2 text-white hover:bg-green-600 bg-green-600">개선방안</a>
+            <a href="effects.html" class="block px-4 py-2 text-white hover:bg-green-600">기대효과</a>
+            <a href="implementation.html" class="block px-4 py-2 text-white hover:bg-green-600">조치사항</a>
+            <a href="trend_analysis.html" class="block px-4 py-2 text-white hover:bg-green-600">트렌드 분석</a>
+        </div>
+    </nav>
+
+    <!-- 페이지 헤더 -->
+    <header class="bg-gradient-to-r from-green-600 to-green-400 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4 fade-in">개선방안</h1>
+            <p class="text-xl max-w-3xl mx-auto fade-in">
+                양평군의 특산물과 관광자원을 활용한 계절별 대표 간식 개발 아이디어를 소개합니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- 제안 개요 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto fade-in">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">제안 개요: "계절愛(애) 양평 스낵 박스" 개발</h2>
+                <p class="text-gray-700 mb-6">
+                    본 제안은 네이버 데이터랩 검색어 트렌드 분석 결과를 바탕으로, 양평군의 계절적 특성과 지역 특산물을 활용한 사계절 대표 간식 개발 아이디어입니다.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    '계절愛(애) 양평 스낵 박스'는 양평의 전통 간식인 수수부꾸미를 현대적으로 재해석하여 계절별 특산물과 결합한 시즌별 간식 세트로, 관광지에서 즐길 수 있는 현장형 간식과 선물용 패키지로 구성되어 양평의 맛과 이야기를 전달하는 대표 먹거리 브랜드입니다.
+                </p>
+                <div class="bg-green-50 border-l-4 border-green-600 p-4 fade-in">
+                    <p class="font-medium text-gray-700">
+                        양평군의 핵심 정책 방향인 <span class="text-green-700 font-bold">'환경, 관광, 건강, 안전'</span>과 연계되어 지속가능한 지역 발전에 기여하는 관광 콘텐츠로 기획되었습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 개선방안 -->
+    <section class="py-16 bg-gray-50" id="main-solutions">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">주요 개선방안</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 fade-in">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition card-hover">
+                    <div class="h-88 bg-blue-100 p-4 flex items-center justify-center">
+                        <img src="img/seasonal_concept.svg" alt="계절별 간식 콘셉트" class="max-h-full img-hover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1. 사계절 양평 대표 간식 개발</h3>
+                        <p class="text-gray-700 mb-4">
+                            전통 간식인 수수부꾸미를 베이스로 하되, 양평 특산물을 활용한 계절별 변형 버전 개발하여 연중 지속적인 관광 활성화를 유도합니다.
+                        </p>
+                        <div class="flex items-center text-sm text-green-600">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>계절별 특산물 활용</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition card-hover">
+                    <div class="h-88 bg-purple-100 p-4 flex items-center justify-center">
+                        <img src="img/tourism_integration.svg" alt="관광지 연계 판매 전략" class="max-h-full img-hover">
+                    </div>
+
+
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2. 관광지 연계 판매 전략</h3>
+                        <p class="text-gray-700 mb-4">
+                            지역 관광지별 특화 팝업 스토어 운영 및 지역 카페/음식점과의 협업 네트워크 구축을 통해 관광-먹거리 연계성을 강화합니다.
+                        </p>
+                        <div class="flex items-center text-sm text-green-600">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>관광-먹거리 연계 강화</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition card-hover">
+                    <div class="h-88 bg-yellow-100 p-4 flex items-center justify-center">
+                        <img src="img/youth_trends.svg" alt="청년 선호 트렌드 반영" class="max-h-full img-hover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">3. 청년 선호 간식 트렌드 반영</h3>
+                        <p class="text-gray-700 mb-4">
+                            SNS에서 공유될 수 있는 비주얼과 스토리텔링 요소를 갖춘 간식 개발로 MZ세대의 관심을 유도합니다.
+                        </p>
+                        <div class="flex items-center text-sm text-green-600">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>MZ세대 유입 촉진</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition card-hover">
+                    <div class="h-88 bg-red-100 p-4 flex items-center justify-center">
+                        <img src="img/sustainable_packaging.svg" alt="환경 친화적 패키징" class="max-h-full img-hover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">4. 친환경 패키지 및 마케팅</h3>
+                        <p class="text-gray-700 mb-4">
+                            생분해성 포장재 사용 및 디지털 마케팅 전략으로 환경 보전과 홍보 효과를 동시에 창출합니다.
+                        </p>
+                        <div class="flex items-center text-sm text-green-600">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>환경 보전 가치 실현</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 계절별 간식 상세 소개 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">계절별 양평 스낵 박스 상세</h2>
+            
+            <!-- 봄 시즌 간식 -->
+            <div id="spring" class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-pink-100 rounded-lg p-4 text-center">
+                            <h3 class="text-2xl font-bold text-pink-600 mb-2">봄 시즌</h3>
+                            <h4 class="text-xl text-gray-800 mb-4">양평 봄꽃 디저트 박스</h4>
+                            <img src="img/1spring_snack.png" alt="봄 시즌 - 딸기 생크림 수수부꾸미" class="mx-auto mb-4 rounded-lg img-hover">
+                            <p class="text-gray-600 italic">3월 - 5월</p>
+
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">메인 간식: 양평 딸기 생크림 수수부꾸미</h4>
+                        <p class="text-gray-700 mb-4">
+                            전통 수수부꾸미 반죽에 양평에서 생산된 유기농 딸기를 넣은 생크림 필링을 더해 상큼한 봄의 맛을 담았습니다. 꽃잎 모양의 포장 디자인으로 봄꽃 여행의 감성을 더합니다.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">서브 아이템</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>들꽃향 꿀 마들렌</li>
+                                    <li>두물머리 벚꽃 쿠키</li>
+                                    <li>양평 딸기잼 샌드위치</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">건강 효능</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>딸기의 비타민C 함량 (일일 권장량 100%)</li>
+                                    <li>알레르기 완화 및 면역력 강화 효과</li>
+                                    <li>잡곡 수수의 식이섬유 (변비 예방)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg border-l-4 border-pink-400">
+                            <h5 class="font-bold text-gray-800 mb-2">관광 연계 전략</h5>
+                            <p class="text-gray-700">
+                                양평의 봄꽃 명소(두물머리, 세미원 등)와 연계한 한정판 패키지 판매 및 벚꽃 축제, 딸기 체험농장 방문객을 위한 특별 프로모션을 제공합니다. 딸기 수확 체험과 간식 제조 체험을 연계한 원데이 클래스도 운영합니다.
+                            </p>
+
+                        </div>
+<br><br><br>
+    <p class="text-xs text-gray-600 mt-2">* 사진자료는 이해를 돕기 위해 AI로 생성한 참고용 이미지로 자세한 것은 내용을 참고해 주시기 바랍니다.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+            <!-- 여름 시즌 간식 -->
+            <div id="summer" class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-blue-100 rounded-lg p-4 text-center">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-2">여름 시즌</h3>
+                            <h4 class="text-xl text-gray-800 mb-4">양평 계곡 힐링 스낵 박스</h4>
+                            <img src="img/2summer_snack.png" alt="여름 시즌 - 표고버섯 크림치즈 수수부꾸미" class="mx-auto mb-4 rounded-lg img-hover">
+                            <p class="text-gray-600 italic">6월 - 8월</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">메인 간식: 용문산 표고버섯 크림치즈 수수부꾸미</h4>
+                        <p class="text-gray-700 mb-4">
+                            양평 용문산에서 재배된 표고버섯과 크림치즈를 결합한 시원한 필링의 수수부꾸미입니다. 용문산 실루엣 모양의 포장과 친환경 소재를 사용해 자연 친화적 이미지를 강조했습니다.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">서브 아이템</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>서종 과일 파르페 컵</li>
+                                    <li>청운 수박 화채 젤리</li>
+                                    <li>계곡 청량감 에이드</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">패키지 특징</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>휴대용 쿨러 패키지 제공</li>
+                                    <li>QR코드로 계곡 물소리 ASMR 체험</li>
+                                    <li>완전 분해되는 친환경 용기 사용</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-bold text-gray-800 mb-2">관광 연계 전략</h5>
+                            <p class="text-gray-700">
+                                용문산, 유명 계곡 입구, 수상레저 시설 등에 팝업 스토어 설치로 즉석 간식 제공 서비스를 운영합니다. 여름 피서객의 이동 동선을 고려한 간식 코스 및 '양평 물놀이 간식 세트' 할인 프로모션을 제공합니다.
+                            </p>
+                        </div>
+<br><br><br>
+    <p class="text-xs text-gray-600 mt-2">* 사진자료는 이해를 돕기 위해 AI로 생성한 참고용 이미지로 자세한 것은 내용을 참고해 주시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 가을 시즌 간식 -->
+            <div id="fall" class="bg-white rounded-lg shadow-lg p-6 mb-12 fade-in">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-orange-100 rounded-lg p-4 text-center">
+                            <h3 class="text-2xl font-bold text-orange-600 mb-2">가을 시즌</h3>
+                            <h4 class="text-xl text-gray-800 mb-4">양평 단풍길 간식 박스</h4>
+                            <img src="img/3fall_snack.png" alt="가을 시즌 - 영양 표고 수수부꾸미" class="mx-auto mb-4 rounded-lg img-hover">
+                            <p class="text-gray-600 italic">9월 - 11월</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">메인 간식: 양동 표고 영양 수수부꾸미</h4>
+                        <p class="text-gray-700 mb-4">
+                            양평 양동에서 생산된 표고버섯 가루를 반죽에 넣어 영양과 풍미를 높인 수수부꾸미입니다. 단풍잎 모양 틀과 잡곡 설탕 코팅으로 가을 정취를 표현했습니다.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">서브 아이템</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>옥천 군고구마 크림빵</li>
+                                    <li>강상 사과 파이 포켓</li>
+                                    <li>단풍색 메이플 라떼</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">건강 효능</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>표고버섯의 면역력 강화 성분</li>
+                                    <li>식이섬유 및 비타민 D 풍부</li>
+                                    <li>가을철 건강관리에 도움</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-bold text-gray-800 mb-2">관광 연계 전략</h5>
+                            <p class="text-gray-700">
+                                가을 단풍 인증샷과 함께하는 SNS 마케팅 캠페인 및 가을철 단풍 명소 트레킹 관광객을 위한 휴대성 강화 디자인을 적용했습니다. 가을 농산물 축제와 연계한 한정판 패키지 및 표고버섯 농장 체험과 간식 제조 체험을 연계한 프로그램을 운영합니다.
+                            </p>
+                        </div>
+<br><br><br>
+    <p class="text-xs text-gray-600 mt-2">* 사진자료는 이해를 돕기 위해 AI로 생성한 참고용 이미지로 자세한 것은 내용을 참고해 주시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 겨울 시즌 간식 -->
+            <div id="winter" class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-600 mb-2">겨울 시즌</h3>
+                            <h4 class="text-xl text-gray-800 mb-4">양평 설경 간식 박스</h4>
+                            <img src="img/4winter_snack.png" alt="겨울 시즌 - 한우 육포 수수부꾸미" class="mx-auto mb-4 rounded-lg img-hover">
+                            <p class="text-gray-600 italic">12월 - 2월</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">메인 간식: 지평 한우 육포 수수부꾸미</h4>
+                        <p class="text-gray-700 mb-4">
+                            양평 지평에서 생산된 한우를 활용한 육포를 넣은 따뜻한 수수부꾸미입니다. 전통 방식으로 저온 숙성한 한우 육포의 깊은 풍미와 영양을 담았습니다.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">서브 아이템</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>단월 고구마 호떡</li>
+                                    <li>양서 율무차 쿠키</li>
+                                    <li>따뜻한 계피 우유</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h5 class="font-bold text-gray-800 mb-2">패키지 특징</h5>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>보온 패키지로 따뜻하게 유지</li>
+                                    <li>눈 결정체 디자인의 선물 포장</li>
+                                    <li>청년층 타겟 셰어하우스 파티 세트</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gray-200 p-4 rounded-lg border-l-4 border-gray-500">
+                            <h5 class="font-bold text-gray-800 mb-2">관광 연계 전략</h5>
+                            <p class="text-gray-700">
+                                겨울철 비수기 관광 활성화를 위한 한정판 마케팅 전략을 수립하고, 청년층의 겨울철 셰어하우스 수요 증가 현상을 활용한 '공유 파티 박스' 프로모션을 진행합니다. 또한 양평 한우 농장 체험과 연계한 관광 프로그램 및 겨울 축제와 연계한 온기 있는 간식 제공 서비스를 운영합니다.
+                            </p>
+                        </div>
+<br><br><br>
+    <p class="text-xs text-gray-600 mt-2">* 사진자료는 이해를 돕기 위해 AI로 생성한 참고용 이미지로 자세한 것은 내용을 참고해 주시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- 관광지 연계 판매 및 마케팅 전략 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">관광지 연계 판매 및 마케팅 전략</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-purple-600 mb-4">지역 관광지별 특화 팝업 스토어</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-purple-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">두물머리</p>
+                                <p class="text-gray-700">일출/일몰 시간대에 맞춘 '해돋이/해넘이 수수부꾸미' 한정 판매</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-purple-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">용문산관광지</p>
+                                <p class="text-gray-700">등산객 대상 '용문산 기력회복 세트' 형태로 영양 간식 패키지 판매</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-purple-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">양평5일장, 용문5일장</p>
+                                <p class="text-gray-700">전통 수수부꾸미 시연과 현대적 재해석 버전 비교 체험 기회 제공</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-purple-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">세미원</p>
+                                <p class="text-gray-700">연꽃 테마와 연계한 '연꽃 수수부꾸미' 한정판 개발 및 판매</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <img src="img/popup_store_concept.svg" alt="팝업 스토어 콘셉트" class="w-full h-120 object-cover rounded-lg mt-4 img-hover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">지역 협업 네트워크 구축</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">지역 카페 협업</p>
+                                <p class="text-gray-700">양평 지역 유명 카페와의 콜라보 메뉴 개발 (예: '양평 딸기 수수부꾸미 라떼')</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">유명 식당 연계</p>
+                                <p class="text-gray-700">양평해장국 유명 식당과 연계한 '해장세트' 패키지 구성 (해장국 + 디저트 수수부꾸미)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">OEM 생산 시스템</p>
+                                <p class="text-gray-700">지역 요식업체 대상 OEM 제품 공급 및 지역 경제 선순환 구조 구축</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">가격 정책</p>
+                                <p class="text-gray-700">개별 간식 3,000~5,000원, 계절 세트 15,000~20,000원 책정으로 합리적 가격 제공</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <img src="img/local_collaboration_network.svg" alt="지역 협업 네트워크" class="w-full h-120 object-cover rounded-lg mt-4 img-hover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-green-600 mb-4">디지털 마케팅 및 콘텐츠 전략</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">SNS 해시태그 캠페인</p>
+                                <p class="text-gray-700">계절별 SNS 해시태그 캠페인 (#봄엔양평부꾸미, #여름엔양평부꾸미 등) 운영</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">디지털 지도 서비스</p>
+                                <p class="text-gray-700">'양평 먹거리 지도' 앱/웹 개발로 간식 구매 위치 및 관광지 정보 통합 제공</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">인플루언서 마케팅</p>
+                                <p class="text-gray-700">인플루언서 초청 '양평 간식 투어' 프로그램 운영 및 콘텐츠 생산</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">스토리텔링 콘텐츠</p>
+                                <p class="text-gray-700">계절별 간식에 담긴 양평의 이야기와 특산물 스토리 영상 제작</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <img src="img/digital_marketing_strategy.svg" alt="디지털 마케팅 전략" class="w-full h-120 object-cover rounded-lg mt-4 img-hover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-red-600 mb-4">지역 축제 및 이벤트 연계</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-red-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">계절 축제 연계</p>
+                                <p class="text-gray-700">양평 산나물축제, 딸기축제 등과 연계한 시즌 한정판 간식 개발</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">친환경 행사 참여</p>
+                                <p class="text-gray-700">'2025 한국친환경농업인 전국대회'와 연계한 친환경 간식 특별전 기획</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">환경 캠페인</p>
+                                <p class="text-gray-700">양평군 환경 정책과 연계한 '제로웨이스트 간식' 캠페인 진행</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-600 mr-3 text-xl">▶</span>
+                            <div>
+                                <p class="font-bold">정기 이벤트</p>
+                                <p class="text-gray-700">월별 '양평 간식의 날' 지정 및 할인 프로모션 진행</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <img src="img/local_festival_integration.svg" alt="지역 축제 연계" class="w-full h-120 object-cover rounded-lg mt-4 img-hover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 fade-in">제안의 기대효과 및 실행계획</h2>
+            <p class="text-gray-700 mb-8 max-w-2xl mx-auto fade-in">
+                사계절 양평 대표 간식 개발을 통해 관광객 증가, 지역 특산물 부가가치 창출, 청년 일자리 등 다양한 긍정적 효과를 기대할 수 있습니다.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+                <a href="effects.html" class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition btn hover-effect">
+                    기대효과 자세히 보기
+                </a>
+                <a href="implementation.html" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition btn hover-effect">
+                    실행 계획 살펴보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">계절愛 양평 스낵 박스</h3>
+                    <p class="text-gray-400">
+                        양평의 특산물과 전통 간식이 만나 
+                        사계절 내내 즐길 수 있는 양평 대표 간식 프로젝트
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">페이지</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">홈</a></li>
+                        <li><a href="problems.html" class="hover:text-white transition">현황 및 문제점</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition">개선방안</a></li>
+                        <li><a href="effects.html" class="hover:text-white transition">기대효과</a></li>
+                        <li><a href="implementation.html" class="hover:text-white transition">조치사항</a></li>
+                        <li><a href="trend_analysis.html" class="hover:text-white transition">트렌드 분석</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">관련 링크</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">양평군청</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 관광</a></li>
+                        <li><a href="#" class="hover:text-white transition">양평 특산물</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">연락처</h3>
+                    <address class="not-italic text-gray-400">
+                        경기도 양평군<br>
+                        양평읍 군청앞길 2<br>
+                        양평군청 본관 2층<br>
+                        기획예산담당관(미래전략팀)
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>2025년 제1회 양평군 군정발전 국민 제안 공모전</p>
+                <p class="mt-2">© 2025 계절愛 양평 스낵 박스 프로젝트. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
