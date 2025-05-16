@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- 제목 영역 -->
+  <rect x="150" y="30" width="500" height="60" rx="10" ry="10" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="400" y="60" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#4CAF50">사계절 양평 스낵 박스 콘셉트</text>
+  <text x="400" y="85" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">전통 간식 수수부꾸미의 계절별 재해석</text>
+  
+  <!-- 메인 그리드 컨테이너 -->
+  <g transform="translate(100, 120)">
+    <!-- 봄 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="280" height="200" rx="10" ry="10" fill="#ffebee" stroke="#f8bbd0" stroke-width="2"/>
+      
+      <!-- 봄 타이틀 -->
+      <rect x="10" y="10" width="260" height="40" rx="5" ry="5" fill="#f48fb1" opacity="0.9"/>
+      <text x="140" y="35" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">봄 - 양평 봄꽃 디저트 박스</text>
+      
+      <!-- 봄 콘텐츠 -->
+      <g transform="translate(20, 60)">
+        <circle cx="80" cy="60" r="40" fill="#f8bbd0" stroke="#f48fb1" stroke-width="2"/>
+        <text x="80" y="65" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#d81b60">딸기 생크림</text>
+        <text x="80" y="82" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#d81b60">수수부꾸미</text>
+        
+        <!-- 봄 특징 -->
+        <g transform="translate(140, 0)">
+          <rect x="0" y="0" width="100" height="25" rx="5" ry="5" fill="white" stroke="#f48fb1" stroke-width="1"/>
+          <text x="50" y="17" font-family="Arial" font-size="11" text-anchor="middle" fill="#d81b60">양평 딸기 활용</text>
+          
+          <rect x="0" y="30" width="100" height="25" rx="5" ry="5" fill="white" stroke="#f48fb1" stroke-width="1"/>
+          <text x="50" y="47" font-family="Arial" font-size="11" text-anchor="middle" fill="#d81b60">꽃잎 모양 디자인</text>
+          
+          <rect x="0" y="60" width="100" height="25" rx="5" ry="5" fill="white" stroke="#f48fb1" stroke-width="1"/>
+          <text x="50" y="77" font-family="Arial" font-size="11" text-anchor="middle" fill="#d81b60">두물머리 연계</text>
+          
+          <rect x="0" y="90" width="100" height="25" rx="5" ry="5" fill="white" stroke="#f48fb1" stroke-width="1"/>
+          <text x="50" y="107" font-family="Arial" font-size="11" text-anchor="middle" fill="#d81b60">산나물축제 연계</text>
+        </g>
+        
+        <!-- 벚꽃 아이콘 -->
+        <g transform="translate(50, 10)">
+          <circle cx="0" cy="0" r="12" fill="#f8bbd0"/>
+          <circle cx="10" cy="-5" r="12" fill="#f8bbd0"/>
+          <circle cx="5" cy="-15" r="12" fill="#f8bbd0"/>
+          <circle cx="-5" cy="-15" r="12" fill="#f8bbd0"/>
+          <circle cx="-10" cy="-5" r="12" fill="#f8bbd0"/>
+          <circle cx="0" cy="-8" r="6" fill="#ffeb3b"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- 여름 -->
+    <g transform="translate(300, 0)">
+      <rect x="0" y="0" width="280" height="200" rx="10" ry="10" fill="#e3f2fd" stroke="#bbdefb" stroke-width="2"/>
+      
+      <!-- 여름 타이틀 -->
+      <rect x="10" y="10" width="260" height="40" rx="5" ry="5" fill="#42a5f5" opacity="0.9"/>
+      <text x="140" y="35" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">여름 - 양평 계곡 힐링 스낵 박스</text>
+      
+      <!-- 여름 콘텐츠 -->
+      <g transform="translate(20, 60)">
+        <circle cx="80" cy="60" r="40" fill="#bbdefb" stroke="#42a5f5" stroke-width="2"/>
+        <text x="80" y="65" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#1565c0">표고버섯 크림치즈</text>
+        <text x="80" y="82" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#1565c0">수수부꾸미</text>
+        
+        <!-- 여름 특징 -->
+        <g transform="translate(140, 0)">
+          <rect x="0" y="0" width="100" height="25" rx="5" ry="5" fill="white" stroke="#42a5f5" stroke-width="1"/>
+          <text x="50" y="17" font-family="Arial" font-size="11" text-anchor="middle" fill="#1565c0">용문산 표고 활용</text>
+          
+          <rect x="0" y="30" width="100" height="25" rx="5" ry="5" fill="white" stroke="#42a5f5" stroke-width="1"/>
+          <text x="50" y="47" font-family="Arial" font-size="11" text-anchor="middle" fill="#1565c0">친환경 쿨러 포장</text>
+          
+          <rect x="0" y="60" width="100" height="25" rx="5" ry="5" fill="white" stroke="#42a5f5" stroke-width="1"/>
+          <text x="50" y="77" font-family="Arial" font-size="11" text-anchor="middle" fill="#1565c0">계곡 관광 연계</text>
+          
+          <rect x="0" y="90" width="100" height="25" rx="5" ry="5" fill="white" stroke="#42a5f5" stroke-width="1"/>
+          <text x="50" y="107" font-family="Arial" font-size="11" text-anchor="middle" fill="#1565c0">물소리 ASMR QR</text>
+        </g>
+        
+        <!-- 물방울 아이콘 -->
+        <g transform="translate(50, 10)">
+          <path d="M-10,0 C-10,-15 10,-15 10,0 C10,10 -10,10 -10,0 Z" fill="#bbdefb" stroke="#42a5f5" stroke-width="1"/>
+          <path d="M10,5 C10,-10 30,-10 30,5 C30,15 10,15 10,5 Z" fill="#bbdefb" stroke="#42a5f5" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- 가을 -->
+    <g transform="translate(0, 250)">
+      <rect x="0" y="0" width="280" height="200" rx="10" ry="10" fill="#fff3e0" stroke="#ffe0b2" stroke-width="2"/>
+      
+      <!-- 가을 타이틀 -->
+      <rect x="10" y="10" width="260" height="40" rx="5" ry="5" fill="#ff9800" opacity="0.9"/>
+      <text x="140" y="35" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">가을 - 양평 단풍길 간식 박스</text>
+      
+      <!-- 가을 콘텐츠 -->
+      <g transform="translate(20, 60)">
+        <circle cx="80" cy="60" r="40" fill="#ffe0b2" stroke="#ff9800" stroke-width="2"/>
+        <text x="80" y="65" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">양동 표고 영양</text>
+        <text x="80" y="82" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">수수부꾸미</text>
+        
+        <!-- 가을 특징 -->
+        <g transform="translate(140, 0)">
+          <rect x="0" y="0" width="100" height="25" rx="5" ry="5" fill="white" stroke="#ff9800" stroke-width="1"/>
+          <text x="50" y="17" font-family="Arial" font-size="11" text-anchor="middle" fill="#e65100">단풍잎 모양 틀</text>
+          
+          <rect x="0" y="30" width="100" height="25" rx="5" ry="5" fill="white" stroke="#ff9800" stroke-width="1"/>
+          <text x="50" y="47" font-family="Arial" font-size="11" text-anchor="middle" fill="#e65100">잡곡 설탕 코팅</text>
+          
+          <rect x="0" y="60" width="100" height="25" rx="5" ry="5" fill="white" stroke="#ff9800" stroke-width="1"/>
+          <text x="50" y="77" font-family="Arial" font-size="11" text-anchor="middle" fill="#e65100">면역력 강화 효과</text>
+          
+          <rect x="0" y="90" width="100" height="25" rx="5" ry="5" fill="white" stroke="#ff9800" stroke-width="1"/>
+          <text x="50" y="107" font-family="Arial" font-size="11" text-anchor="middle" fill="#e65100">둘레길 연계 디자인</text>
+        </g>
+        
+        <!-- 단풍잎 아이콘 -->
+        <g transform="translate(50, 10)">
+          <path d="M0,-5 L5,0 L10,-5 L5,5 L10,10 L0,7 L-10,10 L-5,5 L-10,-5 L-5,0 Z" fill="#ff9800" stroke="#e65100" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- 겨울 -->
+    <g transform="translate(300, 250)">
+      <rect x="0" y="0" width="280" height="200" rx="10" ry="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+      
+      <!-- 겨울 타이틀 -->
+      <rect x="10" y="10" width="260" height="40" rx="5" ry="5" fill="#78909c" opacity="0.9"/>
+      <text x="140" y="35" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">겨울 - 양평 설경 간식 박스</text>
+      
+      <!-- 겨울 콘텐츠 -->
+      <g transform="translate(20, 60)">
+        <circle cx="80" cy="60" r="40" fill="#e0e0e0" stroke="#78909c" stroke-width="2"/>
+        <text x="80" y="65" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#37474f">지평 한우 육포</text>
+        <text x="80" y="82" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#37474f">수수부꾸미</text>
+        
+        <!-- 겨울 특징 -->
+        <g transform="translate(140, 0)">
+          <rect x="0" y="0" width="100" height="25" rx="5" ry="5" fill="white" stroke="#78909c" stroke-width="1"/>
+          <text x="50" y="17" font-family="Arial" font-size="11" text-anchor="middle" fill="#37474f">양평 한우 육포</text>
+          
+          <rect x="0" y="30" width="100" height="25" rx="5" ry="5" fill="white" stroke="#78909c" stroke-width="1"/>
+          <text x="50" y="47" font-family="Arial" font-size="11" text-anchor="middle" fill="#37474f">보온 패키지 디자인</text>
+          
+          <rect x="0" y="60" width="100" height="25" rx="5" ry="5" fill="white" stroke="#78909c" stroke-width="1"/>
+          <text x="50" y="77" font-family="Arial" font-size="11" text-anchor="middle" fill="#37474f">겨울 비수기 활성화</text>
+          
+          <rect x="0" y="90" width="100" height="25" rx="5" ry="5" fill="white" stroke="#78909c" stroke-width="1"/>
+          <text x="50" y="107" font-family="Arial" font-size="11" text-anchor="middle" fill="#37474f">셰어 파티 박스</text>
+        </g>
+        
+        <!-- 눈꽃 아이콘 -->
+        <g transform="translate(50, 10)">
+          <path d="M0,0 L0,-15 M0,0 L0,15 M0,0 L15,0 M0,0 L-15,0 M0,0 L10,-10 M0,0 L-10,10 M0,0 L-10,-10 M0,0 L10,10" stroke="#78909c" stroke-width="2"/>
+          <circle cx="0" cy="0" r="3" fill="#78909c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 하단 설명 -->
+  <!--g transform="translate(100, 450)">
+    <rect x="0" y="80" width="600" height="60" rx="5" ry="5" fill="white" stroke="#4CAF50" stroke-width="2"/>
+    <text x="300" y="110" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">
+      양평의 특산물과 계절적 특성을 활용한 사계절 수수부꾸미 간식 세트로,
+    </text>
+    <text x="300" y="130" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">
+      매 계절 관광객들에게 양평의 맛과 이야기를 전달하는 대표 먹거리 브랜드입니다.
+    </text>
+  </g-->
+  
+  <!-- 중앙 로고 박스 -->
+  <g transform="translate(320, 310)">
+    <rect x="0" y="0" width="160" height="65" rx="30" ry="30" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+    <text x="80" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">계절愛</text>
+    <text x="80" y="45" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">양평 스낵 박스</text>
+  </g>
+  
+  <!-- 장식용 요소 -->
+  <g transform="translate(0, 0)">
+    <!-- 상단 좌측 장식 -->
+    <circle cx="50" cy="50" r="30" fill="#E8F5E9" opacity="0.6"/>
+    <circle cx="30" cy="70" r="20" fill="#C8E6C9" opacity="0.6"/>
+    
+    <!-- 상단 우측 장식 -->
+    <circle cx="750" cy="50" r="30" fill="#E8F5E9" opacity="0.6"/>
+    <circle cx="770" cy="70" r="20" fill="#C8E6C9" opacity="0.6"/>
+     
+  </g>
+</svg>

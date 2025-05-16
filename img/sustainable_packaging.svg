@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- 제목 영역 -->
+  <rect x="150" y="30" width="500" height="60" rx="10" ry="10" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="400" y="60" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#4CAF50">친환경 패키지 디자인</text>
+  <text x="400" y="85" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">지속가능한 패키징 및 친환경 마케팅 전략</text>
+  
+  <!-- 메인 패키지 표현 -->
+  <g transform="translate(400, 250)">
+    <!-- 기본 상자 -->
+    <g>
+      <rect x="-120" y="-80" width="240" height="160" rx="10" ry="10" fill="#81C784" stroke="#388E3C" stroke-width="2"/>
+      <rect x="-110" y="-70" width="220" height="140" rx="5" ry="5" fill="#F1F8E9" stroke="#C8E6C9" stroke-width="1"/>
+      
+      <!-- 상자 로고 -->
+
+    <g transform="translate(0, -15)">
+      <rect x="-50" y="-40" width="100" height="50" rx="5" ry="5" fill="#4CAF50" opacity="0.9"/>
+      <text x="0" y="-15" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">계절愛</text>
+      <text x="0" y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">양평 스낵 박스</text>
+      </g>
+
+      <!-- 리본 -->
+      <rect x="-120" y="-10" width="240" height="20" fill="#8BC34A" opacity="0.7"/>
+      <polygon points="-35,10 0,30 35,10" fill="#8BC34A" opacity="0.7"/>
+    </g>
+    
+    <!-- 재활용 로고 -->
+    <g transform="translate(-90, -60)">
+      <circle cx="0" cy="0" r="15" fill="#F1F8E9" stroke="#388E3C" stroke-width="1"/>
+      <path d="M-5,-5 L0,-10 L5,-5 L0,10 Z" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+      <path d="M-5,-5 L-10,0 L-5,5 L5,-5 Z" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+      <path d="M5,5 L10,0 L5,-5 L-5,5 Z" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+    </g>
+    
+    <!-- 생분해 로고 -->
+    <g transform="translate(90, -60)">
+      <circle cx="0" cy="0" r="15" fill="#F1F8E9" stroke="#388E3C" stroke-width="1"/>
+      <path d="M-5,5 C-5,-5 5,-5 5,5" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+      <path d="M-3,0 L3,0" stroke="#388E3C" stroke-width="1.5"/>
+      <path d="M0,-5 L0,5" stroke="#388E3C" stroke-width="1.5"/>
+      <path d="M-5,-5 L5,-5" stroke="#388E3C" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- 친환경 패키징 요소들 -->
+  <g>
+    <!-- 생분해성 소재 -->
+    <g transform="translate(170, 350)">
+      <circle cx="0" cy="0" r="60" fill="#DCEDC8" stroke="#8BC34A" stroke-width="2"/>
+      <text x="0" y="-20" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#33691E">생분해성 소재</text>
+      
+      <!-- 아이콘 -->
+      <g transform="translate(0, 0)">
+        <rect x="-20" y="-10" width="40" height="30" fill="#AED581" rx="2" ry="2"/>
+        <path d="M-15,20 C-15,30 15,30 15,20" stroke="#33691E" stroke-width="1.5" fill="none"/>
+        <path d="M-15,30 C-15,40 15,40 15,30" stroke="#33691E" stroke-width="1.5" fill="none"/>
+        <path d="M0,10 L0,35" stroke="#33691E" stroke-width="1"/>
+      </g>
+      
+      <!-- 설명 텍스트 -->
+      <text x="0" y="50" font-family="Arial" font-size="11" text-anchor="middle" fill="#33691E">옥수수 전분 기반</text>
+    </g>
+    
+    <!-- 리필 시스템 -->
+    <g transform="translate(330, 350)">
+      <circle cx="0" cy="0" r="60" fill="#E1F5FE" stroke="#03A9F4" stroke-width="2"/>
+      <text x="0" y="-20" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#01579B">리필 시스템</text>
+      
+      <!-- 아이콘 -->
+      <g transform="translate(0, 10)">
+        <path d="M-15,-10 L15,-10 L15,20 L-15,20 Z" fill="#81D4FA" stroke="#0288D1" stroke-width="1.5" fill-opacity="0.7"/>
+        <path d="M-5,-15 L5,-15 L5,-10 L-5,-10 Z" fill="#81D4FA" stroke="#0288D1" stroke-width="1.5"/>
+        <path d="M-10,0 L10,0" stroke="#0288D1" stroke-width="1.5"/>
+        <path d="M-10,10 L10,10" stroke="#0288D1" stroke-width="1.5"/>
+      </g>
+      
+      <!-- 설명 텍스트 -->
+      <text x="0" y="50" font-family="Arial" font-size="11" text-anchor="middle" fill="#01579B">재사용 용기 할인</text>
+    </g>
+    
+    <!-- 제로 웨이스트 -->
+    <g transform="translate(490, 350)">
+      <circle cx="0" cy="0" r="60" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+      <text x="0" y="-20" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#E65100">제로 웨이스트</text>
+      
+      <!-- 아이콘 -->
+      <g transform="translate(0, 10)">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#E65100" stroke-width="2"/>
+        <line x1="-10" y1="-10" x2="10" y2="10" stroke="#E65100" stroke-width="2"/>
+        <text x="0" y="5" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">0</text>
+      </g>
+      
+      <!-- 설명 텍스트 -->
+      <text x="0" y="50" font-family="Arial" font-size="11" text-anchor="middle" fill="#E65100">폐기물 최소화</text>
+    </g>
+    
+    <!-- 지역 순환 경제 -->
+    <g transform="translate(650, 350)">
+      <circle cx="0" cy="0" r="60" fill="#E8EAF6" stroke="#3F51B5" stroke-width="2"/>
+      <text x="0" y="-20" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1A237E">지역 순환 경제</text>
+      
+      <!-- 아이콘 -->
+      <g transform="translate(0, 10)">
+        <path d="M-20,0 C-20,-15 20,-15 20,0 C20,15 -20,15 -20,0" fill="none" stroke="#3F51B5" stroke-width="1.5"/>
+        <path d="M-10,-7 L-15,0 L-10,7" stroke="#3F51B5" stroke-width="1.5" fill="none"/>
+        <path d="M10,-7 L15,0 L10,7" stroke="#3F51B5" stroke-width="1.5" fill="none"/>
+      </g>
+      
+      <!-- 설명 텍스트 -->
+      <text x="0" y="50" font-family="Arial" font-size="11" text-anchor="middle" fill="#1A237E">지역 자원 활용</text>
+    </g>
+  </g>
+   
+  
+  <!-- 친환경 마케팅 전략 -->
+  <g transform="translate(100, 450)">
+    <rect x="0" y="0" width="600" height="120" rx="10" ry="10" fill="white" stroke="#4CAF50" stroke-width="2"/>
+    <text x="300" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#4CAF50">친환경 마케팅 전략</text>
+    
+    <!-- 전략 포인트 -->
+    <g>
+      <circle cx="30" cy="60" r="10" fill="#4CAF50"/>
+      <text x="30" cy="60" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">1</text>
+      <text x="50" y="65" font-family="Arial" font-size="14" text-anchor="start" fill="#333">환경 보전 캠페인 연계 (빈 용기 수거 시 할인)</text>
+      
+      <circle cx="30" cy="90" r="10" fill="#4CAF50"/>
+      <text x="30" cy="90" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">2</text>
+      <text x="50" y="95" font-family="Arial" font-size="14" text-anchor="start" fill="#333">2025 친환경농업인 전국대회 연계 프로모션</text>
+    </g>
+    
+    <!-- 오른쪽 전략 포인트 -->
+    <g transform="translate(300, 0)">
+      <circle cx="30" cy="60" r="10" fill="#4CAF50"/>
+      <text x="30" cy="60" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">3</text>
+      <text x="50" y="65" font-family="Arial" font-size="14" text-anchor="start" fill="#333">탄소 발자국 표시 및 저감 노력 홍보</text>
+      
+      <circle cx="30" cy="90" r="10" fill="#4CAF50"/>
+      <text x="30" cy="90" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">4</text>
+      <text x="50" y="95" font-family="Arial" font-size="14" text-anchor="start" fill="#333">제로웨이스트 워크숍 및 교육 프로그램</text>
+    </g>
+  </g>
+  
+  <!-- 장식용 요소 -->
+  <g transform="translate(0, 0)">
+    <!-- 상단 좌측 장식 -->
+    <circle cx="50" cy="50" r="30" fill="#E8F5E9" opacity="0.6"/>
+    <circle cx="30" cy="70" r="20" fill="#C8E6C9" opacity="0.6"/>
+    
+    <!-- 상단 우측 장식 -->
+    <circle cx="750" cy="50" r="30" fill="#E8F5E9" opacity="0.6"/>
+    <circle cx="770" cy="70" r="20" fill="#C8E6C9" opacity="0.6"/>
+     
+    <!-- 나뭇잎 장식 -->
+    <g transform="translate(60, 240)">
+      <path d="M0,0 C10,-10 20,-5 15,5 C25,0 30,10 20,15 C30,20 25,30 15,25 C20,35 10,40 0,30 C-10,40 -20,35 -15,25 C-25,30 -30,20 -20,15 C-30,10 -25,0 -15,5 C-20,-5 -10,-10 0,0" fill="#A5D6A7" opacity="0.3"/>
+    </g>
+    
+    <g transform="translate(740, 240)">
+      <path d="M0,0 C10,-10 20,-5 15,5 C25,0 30,10 20,15 C30,20 25,30 15,25 C20,35 10,40 0,30 C-10,40 -20,35 -15,25 C-25,30 -30,20 -20,15 C-30,10 -25,0 -15,5 C-20,-5 -10,-10 0,0" fill="#A5D6A7" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- 중심 - 계절愛 양평 스낵 박스 -->
+  <circle cx="400" cy="300" r="80" fill="#4CAF50" stroke="#333333" stroke-width="2"/>
+  <text x="400" y="290" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">계절愛</text>
+  <text x="400" y="310" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">양평 스낵 박스</text>
+  
+  <!-- 협업 네트워크 요소들 및 연결선 -->
+  
+  <!-- 지역 카페 -->
+  <g>
+    <line x1="345" y1="250" x2="230" y2="180" stroke="#2196F3" stroke-width="3" stroke-dasharray="5,5"/>
+    <circle cx="220" cy="150" r="50" fill="#2196F3" stroke="#333333" stroke-width="2"/>
+    <text x="220" y="145" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">지역 카페</text>
+    <text x="220" y="165" font-family="Arial" font-size="12" text-anchor="middle" fill="white">콜라보 메뉴</text>
+    
+ 
+  </g>
+  
+  <!-- 유명 식당 -->
+  <g>
+    <line x1="470" y1="250" x2="580" y2="180" stroke="#FF5722" stroke-width="3" stroke-dasharray="5,5"/>
+    <circle cx="610" cy="150" r="50" fill="#FF5722" stroke="#333333" stroke-width="2"/>
+    <text x="610" y="145" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">유명 식당</text>
+    <text x="610" y="165" font-family="Arial" font-size="12" text-anchor="middle" fill="white">해장세트 연계</text>
+     
+  </g>
+  
+  <!-- 농가/생산자 -->
+  <g>
+    <line x1="340" y1="350" x2="200" y2="400" stroke="#8BC34A" stroke-width="3" stroke-dasharray="5,5"/>
+    <circle cx="170" cy="420" r="50" fill="#8BC34A" stroke="#333333" stroke-width="2"/>
+    <text x="170" y="415" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">지역 농가</text>
+    <text x="170" y="435" font-family="Arial" font-size="12" text-anchor="middle" fill="white">특산물 공급</text>
+ 
+  </g>
+  
+  <!-- 관광지 -->
+  <g>
+    <line x1="400" y1="380" x2="400" y2="500" stroke="#9C27B0" stroke-width="3" stroke-dasharray="5,5"/>
+    <circle cx="400" cy="530" r="50" fill="#9C27B0" stroke="#333333" stroke-width="2"/>
+    <text x="400" y="525" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">관광지</text>
+    <text x="400" y="545" font-family="Arial" font-size="12" text-anchor="middle" fill="white">현장 판매</text>
+    
+ 
+  </g>
+  
+  <!-- 지역 기업 -->
+  <g>
+    <line x1="460" y1="350" x2="580" y2="420" stroke="#FFC107" stroke-width="3" stroke-dasharray="5,5"/>
+    <circle cx="610" cy="450" r="50" fill="#FFC107" stroke="#333333" stroke-width="2"/>
+    <text x="610" y="445" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">식품 제조업체</text>
+    <text x="610" y="465" font-family="Arial" font-size="12" text-anchor="middle" fill="white">OEM 생산</text>
+ 
+  </g>
+  
+  <!-- 설명 텍스트 -->
+  <rect x="150" y="20" width="500" height="60" fill="white" stroke="#2196F3" stroke-width="2" rx="10" ry="10"/>
+  <text x="400" y="50" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#2196F3">지역 협업 네트워크</text>
+  <text x="400" y="75" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">양평의 다양한 지역 업체들과 연계한 협력 시스템</text>
+  
+   
+  
+  <!-- 가격 정책 상자 -->
+  <g transform="translate(50, 220)">
+    <rect x="0" y="0" width="180" height="100" fill="white" stroke="#FF5722" stroke-width="2" rx="5" ry="5"/>
+    <text x="90" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#FF5722">가격 정책</text>
+    <line x1="20" y1="35" x2="160" y2="35" stroke="#FF5722" stroke-width="1"/>
+    <text x="20" y="55" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 개별 간식: 3,000~5,000원</text>
+    <text x="20" y="75" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 계절 세트: 15,000~20,000원</text>
+    <text x="20" y="95" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 선물 세트: 25,000~30,000원</text>
+  </g>
+  
+  <!-- 협업 혜택 상자 -->
+  <g transform="translate(570, 250)">
+    <rect x="0" y="0" width="180" height="100" fill="white" stroke="#9C27B0" stroke-width="2" rx="5" ry="5"/>
+    <text x="90" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#9C27B0">협업 혜택</text>
+    <line x1="20" y1="35" x2="160" y2="35" stroke="#9C27B0" stroke-width="1"/>
+    <text x="20" y="55" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 공동 마케팅 효과</text>
+    <text x="20" y="75" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 지역 경제 활성화</text>
+    <text x="20" y="95" font-family="Arial" font-size="12" text-anchor="start" fill="#333333">- 관광 시너지 창출</text>
+  </g>
+</svg>

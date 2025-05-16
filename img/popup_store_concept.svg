@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- 하늘 -->
+  <rect width="800" height="200" fill="#e6f7ff"/>
+  
+  <!-- 산 -->
+  <path d="M0,200 L150,120 L250,180 L350,100 L450,170 L550,80 L650,160 L800,120 L800,200 Z" fill="#8bc34a" opacity="0.7"/>
+  
+  <!-- 땅 -->
+  <rect x="0" y="200" width="800" height="400" fill="#f0f4e8"/>
+  
+  <!-- 팝업 스토어 메인 부스 -->
+  <g>
+    <!-- 부스 메인 프레임 -->
+    <rect x="250" y="220" width="300" height="200" fill="#ffffff" stroke="#333333" stroke-width="3"/>
+    
+    <!-- 지붕 -->
+    <polygon points="220,220 580,220 500,150 300,150" fill="#8e44ad" stroke="#333333" stroke-width="2"/>
+    
+    <!-- 창문 -->
+    <rect x="270" y="240" width="120" height="80" fill="#d1f3ff" stroke="#333333" stroke-width="2"/>
+    <line x1="330" y1="240" x2="330" y2="320" stroke="#333333" stroke-width="1"/>
+    <line x1="270" y1="280" x2="390" y2="280" stroke="#333333" stroke-width="1"/>
+    
+    <!-- 카운터 -->
+    <rect x="250" y="340" width="300" height="30" fill="#9c27b0" stroke="#333333" stroke-width="2"/>
+    <rect x="290" y="370" width="220" height="50" fill="#ce93d8" stroke="#333333" stroke-width="1"/>
+    
+    <!-- POP-UP 간판 -->
+    <rect x="300" y="170" width="200" height="40" fill="#ffffff" stroke="#333333" stroke-width="2" rx="5" ry="5"/>
+    <text x="400" y="198" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#8e44ad">POP-UP STORE</text>
+    
+    <!-- 스낵 박스 로고 -->
+    <rect x="410" y="240" width="120" height="80" fill="#ffeb3b" stroke="#333333" stroke-width="2" rx="5" ry="5"/>
+    <text x="470" y="270" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">계절愛</text>
+    <text x="470" y="290" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">양평 스낵</text>
+    <text x="470" y="310" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">박스</text>
+  </g>
+  
+  <!-- 진열된 상품들 -->
+  <g>
+    <!-- 선반 -->
+    <rect x="290" y="380" width="220" height="5" fill="#8d6e63"/>
+    
+    <!-- 상품들 (봄, 여름, 가을, 겨울 박스) -->
+    <rect x="300" y="350" width="40" height="30" fill="#ffcdd2" stroke="#333333" stroke-width="1"/>
+    <rect x="350" y="350" width="40" height="30" fill="#bbdefb" stroke="#333333" stroke-width="1"/>
+    <rect x="400" y="350" width="40" height="30" fill="#ffcc80" stroke="#333333" stroke-width="1"/>
+    <rect x="450" y="350" width="40" height="30" fill="#e0e0e0" stroke="#333333" stroke-width="1"/>
+  </g>
+  
+  <!-- 관광객 1 -->
+  <g transform="translate(130, 300)">
+    <!-- 머리 -->
+    <circle cx="25" cy="25" r="20" fill="#ffccaa"/>
+    <!-- 몸통 -->
+    <rect x="15" y="45" width="20" height="40" fill="#ff9800"/>
+    <!-- 팔 -->
+    <line x1="15" y1="50" x2="0" y2="70" stroke="#ffccaa" stroke-width="5"/>
+    <line x1="35" y1="50" x2="50" y2="70" stroke="#ffccaa" stroke-width="5"/>
+    <!-- 다리 -->
+    <line x1="20" y1="85" x2="15" y2="120" stroke="#333333" stroke-width="5"/>
+    <line x1="30" y1="85" x2="35" y2="120" stroke="#333333" stroke-width="5"/>
+  </g>
+  
+  <!-- 관광객 2 -->
+  <g transform="translate(650, 320)">
+    <!-- 머리 -->
+    <circle cx="25" cy="25" r="20" fill="#ffddbb"/>
+    <!-- 몸통 -->
+    <rect x="15" y="45" width="20" height="40" fill="#4caf50"/>
+    <!-- 팔 -->
+    <line x1="15" y1="50" x2="0" y2="70" stroke="#ffddbb" stroke-width="5"/>
+    <line x1="35" y1="50" x2="50" y2="70" stroke="#ffddbb" stroke-width="5"/>
+    <!-- 다리 -->
+    <line x1="20" y1="85" x2="15" y2="120" stroke="#333333" stroke-width="5"/>
+    <line x1="30" y1="85" x2="35" y2="120" stroke="#333333" stroke-width="5"/>
+  </g>
+  
+  <!-- 관광지 요소들 -->
+  <g>
+    <!-- 나무 1 -->
+    <rect x="100" y="250" width="10" height="50" fill="#795548"/>
+    <circle cx="105" cy="230" r="25" fill="#4caf50"/>
+    
+    <!-- 나무 2 -->
+    <rect x="160" y="270" width="8" height="40" fill="#795548"/>
+    <circle cx="164" cy="250" r="20" fill="#2e7d32"/>
+    
+    <!-- 나무 3 -->
+    <rect x="700" y="280" width="12" height="60" fill="#795548"/>
+    <circle cx="706" cy="250" r="30" fill="#4caf50"/>
+  </g>
+  
+  <!-- 설명 텍스트 -->
+  <g>
+    <rect x="150" y="450" width="500" height="100" fill="#ffffff" stroke="#8e44ad" stroke-width="2" rx="10" ry="10"/>
+    <text x="400" y="480" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#8e44ad">팝업 스토어 콘셉트</text>
+    <text x="400" y="510" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">양평 주요 관광지에 위치한 시즌별 간식 판매 부스로</text>
+    <text x="400" y="530" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">관광객들에게 계절별 특색 있는 양평의 맛을 소개합니다.</text>
+  </g>
+  
+  <!-- 계절 아이콘 -->
+  <g transform="translate(150, 60)">
+    <!-- 봄 -->
+    <circle cx="100" cy="30" r="20" fill="#ffcdd2" stroke="#333333" stroke-width="1"/>
+    <text x="100" y="35" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">봄</text>
+    
+    <!-- 여름 -->
+    <circle cx="150" cy="30" r="20" fill="#bbdefb" stroke="#333333" stroke-width="1"/>
+    <text x="150" y="35" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">여름</text>
+    
+    <!-- 가을 -->
+    <circle cx="200" cy="30" r="20" fill="#ffcc80" stroke="#333333" stroke-width="1"/>
+    <text x="200" y="35" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">가을</text>
+    
+    <!-- 겨울 -->
+    <circle cx="250" cy="30" r="20" fill="#e0e0e0" stroke="#333333" stroke-width="1"/>
+    <text x="250" y="35" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">겨울</text>
+  </g>
+</svg>

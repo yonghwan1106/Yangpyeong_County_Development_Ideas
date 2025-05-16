@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- 하늘 -->
+  <rect width="800" height="150" fill="#e3f2fd"/>
+  
+  <!-- 멀리 있는 산 -->
+  <path d="M0,150 L100,120 L200,140 L300,110 L400,150 L500,120 L600,140 L700,110 L800,150 L800,150 L0,150 Z" fill="#81c784" opacity="0.7"/>
+  
+  <!-- 축제 배너 -->
+  <g>
+    <path d="M100,100 Q400,50 700,100" stroke="#f44336" stroke-width="3" fill="none"/>
+    <path d="M100,110 Q400,60 700,110" stroke="#2196f3" stroke-width="3" fill="none"/>
+    <path d="M100,120 Q400,70 700,120" stroke="#4caf50" stroke-width="3" fill="none"/>
+    
+    <!-- 깃발/장식들 -->
+    <g>
+      <polygon points="150,90 160,100 150,110" fill="#f44336"/>
+      <polygon points="250,75 260,85 250,95" fill="#2196f3"/>
+      <polygon points="350,65 360,75 350,85" fill="#4caf50"/>
+      <polygon points="450,60 460,70 450,80" fill="#ffc107"/>
+      <polygon points="550,65 560,75 550,85" fill="#9c27b0"/>
+      <polygon points="650,80 660,90 650,100" fill="#ff5722"/>
+    </g>
+  </g>
+  
+  <!-- 축제 무대 플랫폼 -->
+  <rect x="100" y="300" width="600" height="20" fill="#795548"/>
+  <rect x="150" y="320" width="500" height="80" fill="#8d6e63"/>
+  <rect x="200" y="250" width="400" height="50" fill="#d7ccc8"/>
+  <text x="400" y="285" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#4e342e">양평 계절 축제</text>
+  
+  <!-- 식품 부스들 -->
+  <g>
+    <!-- 부스 1 - 봄 -->
+    <g transform="translate(150, 350)">
+      <rect x="0" y="0" width="100" height="120" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+      <rect x="40" y="-15" width="20" height="15" fill="#b71c1c"/>
+      <polygon points="0,0 50,-30 100,0" fill="#ef9a9a" stroke="#c62828" stroke-width="2"/>
+      <text x="50" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#c62828">봄</text>
+      <text x="50" y="50" font-family="Arial" font-size="10" text-anchor="middle" fill="#c62828">딸기축제</text>
+      <rect x="15" y="70" width="80" height="30" rx="5" ry="5" fill="#ffffff" stroke="#c62828" stroke-width="1"/>
+      <text x="55" y="90" font-family="Arial" font-size="10" text-anchor="middle" fill="#c62828">딸기 수수부꾸미</text>
+    </g>
+    
+    <!-- 부스 2 - 여름 -->
+    <g transform="translate(300, 350)">
+      <rect x="0" y="0" width="100" height="120" fill="#bbdefb" stroke="#0d47a1" stroke-width="2"/>
+      <rect x="40" y="-15" width="20" height="15" fill="#0d47a1"/>
+      <polygon points="0,0 50,-30 100,0" fill="#90caf9" stroke="#0d47a1" stroke-width="2"/>
+      <text x="50" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#0d47a1">여름</text>
+      <text x="50" y="50" font-family="Arial" font-size="10" text-anchor="middle" fill="#0d47a1">계곡축제</text>
+      <rect x="15" y="70" width="80" height="30" rx="5" ry="5" fill="#ffffff" stroke="#0d47a1" stroke-width="1"/>
+      <text x="55" y="90" font-family="Arial" font-size="10" text-anchor="middle" fill="#0d47a1">표고 수수부꾸미</text>
+    </g>
+    
+    <!-- 부스 3 - 가을 -->
+    <g transform="translate(450, 350)">
+      <rect x="0" y="0" width="100" height="120" fill="#ffe0b2" stroke="#e65100" stroke-width="2"/>
+      <rect x="40" y="-15" width="20" height="15" fill="#e65100"/>
+      <polygon points="0,0 50,-30 100,0" fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+      <text x="50" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">가을</text>
+      <text x="50" y="50" font-family="Arial" font-size="10" text-anchor="middle" fill="#e65100">단풍축제</text>
+      <rect x="15" y="70" width="80" height="30" rx="5" ry="5" fill="#ffffff" stroke="#e65100" stroke-width="1"/>
+      <text x="55" y="90" font-family="Arial" font-size="10" text-anchor="middle" fill="#e65100">영양 수수부꾸미</text>
+    </g>
+    
+    <!-- 부스 4 - 겨울 -->
+    <g transform="translate(600, 350)">
+      <rect x="0" y="0" width="100" height="120" fill="#e0e0e0" stroke="#424242" stroke-width="2"/>
+      <rect x="40" y="-15" width="20" height="15" fill="#424242"/>
+      <polygon points="0,0 50,-30 100,0" fill="#bdbdbd" stroke="#424242" stroke-width="2"/>
+      <text x="50" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#424242">겨울</text>
+      <text x="50" y="50" font-family="Arial" font-size="10" text-anchor="middle" fill="#424242">설경축제</text>
+      <rect x="15" y="70" width="80" height="30" rx="5" ry="5" fill="#ffffff" stroke="#424242" stroke-width="1"/>
+      <text x="55" y="90" font-family="Arial" font-size="10" text-anchor="middle" fill="#424242">한우 수수부꾸미</text>
+    </g>
+  </g>
+  
+  <!-- 사람들 -->
+  <g>
+    <!-- 사람 1 -->
+    <g transform="translate(200, 490)">
+      <circle cx="0" cy="0" r="10" fill="#ffccaa"/>
+      <rect x="-5" y="10" width="10" height="20" fill="#f44336"/>
+      <line x1="-5" y1="15" x2="-15" y2="25" stroke="#ffccaa" stroke-width="3"/>
+      <line x1="5" y1="15" x2="15" y2="25" stroke="#ffccaa" stroke-width="3"/>
+      <line x1="-3" y1="30" x2="-8" y2="45" stroke="#333333" stroke-width="3"/>
+      <line x1="3" y1="30" x2="8" y2="45" stroke="#333333" stroke-width="3"/>
+    </g>
+    
+    <!-- 사람 2 -->
+    <g transform="translate(350, 490)">
+      <circle cx="0" cy="0" r="10" fill="#ffddbb"/>
+      <rect x="-5" y="10" width="10" height="20" fill="#2196f3"/>
+      <line x1="-5" y1="15" x2="-15" y2="25" stroke="#ffddbb" stroke-width="3"/>
+      <line x1="5" y1="15" x2="15" y2="25" stroke="#ffddbb" stroke-width="3"/>
+      <line x1="-3" y1="30" x2="-8" y2="45" stroke="#333333" stroke-width="3"/>
+      <line x1="3" y1="30" x2="8" y2="45" stroke="#333333" stroke-width="3"/>
+    </g>
+    
+    <!-- 사람 3 -->
+    <g transform="translate(500, 490)">
+      <circle cx="0" cy="0" r="10" fill="#ffccaa"/>
+      <rect x="-5" y="10" width="10" height="20" fill="#4caf50"/>
+      <line x1="-5" y1="15" x2="-15" y2="25" stroke="#ffccaa" stroke-width="3"/>
+      <line x1="5" y1="15" x2="15" y2="25" stroke="#ffccaa" stroke-width="3"/>
+      <line x1="-3" y1="30" x2="-8" y2="45" stroke="#333333" stroke-width="3"/>
+      <line x1="3" y1="30" x2="8" y2="45" stroke="#333333" stroke-width="3"/>
+    </g>
+    
+    <!-- 사람 4 -->
+    <g transform="translate(650, 490)">
+      <circle cx="0" cy="0" r="10" fill="#ffddbb"/>
+      <rect x="-5" y="10" width="10" height="20" fill="#ff9800"/>
+      <line x1="-5" y1="15" x2="-15" y2="25" stroke="#ffddbb" stroke-width="3"/>
+      <line x1="5" y1="15" x2="15" y2="25" stroke="#ffddbb" stroke-width="3"/>
+      <line x1="-3" y1="30" x2="-8" y2="45" stroke="#333333" stroke-width="3"/>
+      <line x1="3" y1="30" x2="8" y2="45" stroke="#333333" stroke-width="3"/>
+    </g>
+  </g>
+  
+  <!-- 설명 상자 -->
+  <g>
+    <rect x="50" y="180" width="700" height="50" rx="10" ry="10" fill="#ffffff" stroke="#4caf50" stroke-width="2"/>
+    <text x="400" y="210" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#4caf50">지역 축제 및 이벤트 연계 마케팅</text>
+  </g>
+  
+  <!-- 양평 로고 -->
+  <g transform="translate(700, 50)">
+    <circle cx="50" cy="50" r="30" fill="#4CAF50"/>
+    <text x="50" y="55" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">양평군</text>
+  </g>
+  
+  <!-- 전략 설명 상자 -->
+  <g transform="translate(50, 540)">
+    <rect x="0" y="0" width="700" height="50" rx="10" ry="10" fill="#ffffff" stroke="#9c27b0" stroke-width="2"/>
+    <text x="20" y="20" font-family="Arial" font-size="12" fill="#9c27b0">• 계절별 축제 연계: 양평 산나물축제, 딸기축제 등과 계절 한정판 간식 개발</text>
+    <text x="20" y="40" font-family="Arial" font-size="12" fill="#9c27b0">• 친환경 행사 참여: '2025 한국친환경농업인 전국대회'와 연계한 친환경 간식 특별전</text>
+    <text x="450" y="20" font-family="Arial" font-size="12" fill="#9c27b0">• 환경 캠페인: '제로웨이스트 간식' 캠페인</text>
+    <text x="450" y="40" font-family="Arial" font-size="12" fill="#9c27b0">• 정기 이벤트: 월별 '양평 간식의 날' 운영</text>
+  </g>
+</svg>

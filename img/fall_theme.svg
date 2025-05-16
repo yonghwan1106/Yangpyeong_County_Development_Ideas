@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="600" height="400" fill="#fff8e1" />
+  
+  <!-- 가을 단풍 나무 -->
+  <path d="M 300,400 Q 350,300 320,200 Q 290,100 320,50" stroke="#795548" stroke-width="15" fill="none" />
+  <path d="M 320,50 Q 340,70 370,60" stroke="#795548" stroke-width="8" fill="none" />
+  <path d="M 320,50 Q 310,30 330,20" stroke="#795548" stroke-width="6" fill="none" />
+  <path d="M 320,200 Q 340,190 360,210" stroke="#795548" stroke-width="10" fill="none" />
+  <path d="M 320,200 Q 290,210 300,240" stroke="#795548" stroke-width="8" fill="none" />
+  
+  <!-- 단풍잎 -->
+  <path d="M 320,50 Q 340,30 325,5 Q 310,30 320,50" fill="#e65100" />
+  <path d="M 370,60 Q 390,50 395,30 Q 370,40 370,60" fill="#ef6c00" />
+  <path d="M 330,20 Q 345,0 360,15 Q 345,25 330,20" fill="#ff9800" />
+  <path d="M 310,30 Q 285,20 280,0 Q 305,15 310,30" fill="#ff5722" />
+  <path d="M 360,210 Q 380,200 395,220 Q 365,215 360,210" fill="#f57c00" />
+  <path d="M 300,240 Q 280,230 265,250 Q 295,245 300,240" fill="#fb8c00" />
+  <path d="M 340,190 Q 355,170 375,185 Q 350,195 340,190" fill="#e65100" />
+  <path d="M 290,210 Q 270,195 255,215 Q 285,205 290,210" fill="#ff9800" />
+  
+  <!-- 더 많은 낙엽들 -->
+  <path d="M 100,150 Q 120,130 105,105 Q 90,130 100,150" fill="#e65100" />
+  <path d="M 150,250 Q 170,230 155,205 Q 140,230 150,250" fill="#ff5722" />
+  <path d="M 500,150 Q 520,130 505,105 Q 490,130 500,150" fill="#f57c00" />
+  <path d="M 450,250 Q 470,230 455,205 Q 440,230 450,250" fill="#ef6c00" />
+  <path d="M 200,100 Q 220,80 205,55 Q 190,80 200,100" fill="#fb8c00" />
+  <path d="M 400,100 Q 420,80 405,55 Q 390,80 400,100" fill="#ff9800" />
+  
+  <!-- 단풍잎 모양 수수부꾸미 -->
+  <path d="M 250,300 Q 300,250 350,300 Q 400,350 350,380 Q 300,400 250,350 Q 200,300 250,300 Z" fill="#f5f5dc" />
+  <path d="M 260,310 Q 300,270 340,310 Q 380,350 340,370 Q 300,385 260,340 Q 220,310 260,310 Z" fill="#fff3e0" />
+  
+  <!-- 수수부꾸미 표고 가루 뿌린 효과 -->
+  <circle cx="280" cy="330" r="5" fill="#8d6e63" opacity="0.6" />
+  <circle cx="320" cy="340" r="4" fill="#8d6e63" opacity="0.6" />
+  <circle cx="300" cy="310" r="3" fill="#8d6e63" opacity="0.6" />
+  <circle cx="330" cy="320" r="4" fill="#8d6e63" opacity="0.6" />
+  <circle cx="310" cy="350" r="5" fill="#8d6e63" opacity="0.6" />
+  <circle cx="290" cy="360" r="3" fill="#8d6e63" opacity="0.6" />
+  <circle cx="340" cy="350" r="4" fill="#8d6e63" opacity="0.6" />
+  
+  <!-- 제목 -->
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#e65100">가을 - 영양 수수부꾸미</text>
+</svg>
