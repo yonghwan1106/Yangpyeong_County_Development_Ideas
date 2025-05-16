@@ -35,19 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 4000); // 4초마다 전환
     }
 
-    // 스크롤 애니메이션
-    const fadeElements = document.querySelectorAll('.fade-in');
+    // 스크롤 애니메이션 향상
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
     
     // 페이지 로드 시 초기 체크
-    checkFade();
+    checkAnimation();
     
     // 스크롤 시 체크
-    window.addEventListener('scroll', checkFade);
+    window.addEventListener('scroll', checkAnimation);
     
-    function checkFade() {
-        const triggerBottom = window.innerHeight * 0.8;
+    function checkAnimation() {
+        const triggerBottom = window.innerHeight * 0.85;
         
-        fadeElements.forEach(element => {
+        animatedElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             
             if (elementTop < triggerBottom) {
@@ -79,6 +79,130 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 인터랙티브 타임라인 세부정보 표시
+    window.showTimelineDetail = function(phase) {
+        const details = {
+            1: {
+                title: "1단계: 상품 기획 및 R&D (1~3개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>시장 조사 및 벤치마킹</li>
+                        <li>제품 컨셉 및 브랜드 전략 수립</li>
+                        <li>계절별 레시피 개발 및 테스트</li>
+                        <li>원재료 확보 계획 수립</li>
+                        <li>초기 예산 집행 계획 수립</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-blue-200">
+                        <p class="text-blue-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">제품 컨셉 및 기본 레시피 확정, 브랜드 전략 문서</p>
+                    </div>
+                `
+            },
+            2: {
+                title: "2단계: 시제품 개발 및 테스트 (3~5개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>계절별 시제품 제작 및 품평회 진행</li>
+                        <li>패키지 디자인 개발 및 시안 제작</li>
+                        <li>소비자 반응 조사 및 피드백 수집</li>
+                        <li>원재료 공급 농가와의 계약 체결</li>
+                        <li>품질 표준화 및 안전 관리 체계 구축</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-green-200">
+                        <p class="text-green-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">최종 제품 확정, 패키지 디자인 완성, 소비자 테스트 결과</p>
+                    </div>
+                `
+            },
+            3: {
+                title: "3단계: 브랜드 및 패키지 디자인 완성 (5~6개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>브랜드 아이덴티티 최종 확정</li>
+                        <li>친환경 패키지 디자인 및 제작</li>
+                        <li>브랜드 스토리텔링 및 콘텐츠 개발</li>
+                        <li>마케팅 전략 및 계획 수립</li>
+                        <li>상표권 등록 및 지식재산권 확보</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-purple-200">
+                        <p class="text-purple-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">브랜드 가이드라인, 패키지 디자인 생산 시안, 마케팅 플랜</p>
+                    </div>
+                `
+            },
+            4: {
+                title: "4단계: 생산 시스템 구축 및 품질 관리 체계 확립 (6~8개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>생산 시설 및 설비 구축/계약</li>
+                        <li>생산 인력 채용 및 교육</li>
+                        <li>품질 관리 시스템 구축</li>
+                        <li>HACCP 인증 준비</li>
+                        <li>공급망 관리 체계 확립</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-yellow-200">
+                        <p class="text-yellow-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">생산 체계 완성, 품질 관리 매뉴얼, 생산 전문 인력 확보</p>
+                    </div>
+                `
+            },
+            5: {
+                title: "5단계: 마케팅 계획 수립 및 홍보 자료 제작 (8~9개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>SNS 채널 구축 및 콘텐츠 제작</li>
+                        <li>홍보 영상 및 사진 촬영</li>
+                        <li>온라인 및 오프라인 홍보물 제작</li>
+                        <li>인플루언서 마케팅 계획 수립</li>
+                        <li>론칭 이벤트 기획</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-red-200">
+                        <p class="text-red-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">브랜드 SNS 채널, 홍보 콘텐츠, 마케팅 캠페인 계획</p>
+                    </div>
+                `
+            },
+            6: {
+                title: "6단계: 관광지 및 유통 채널 구축 (9~10개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>관광지 내 판매점 계약 및 설치</li>
+                        <li>온라인 쇼핑몰 구축</li>
+                        <li>주요 유통 채널 입점</li>
+                        <li>물류 및 배송 시스템 구축</li>
+                        <li>판매 인력 교육 및 매뉴얼 개발</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-indigo-200">
+                        <p class="text-indigo-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">오프라인/온라인 판매망 구축, 물류 체계 확립</p>
+                    </div>
+                `
+            },
+            7: {
+                title: "7단계: 시범 판매 및 피드백 수집, 개선 (10~12개월)",
+                content: `
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>시범 판매 및 소비자 피드백 수집</li>
+                        <li>제품 및 서비스 개선</li>
+                        <li>론칭 이벤트 실행</li>
+                        <li>판매 데이터 분석 및 전략 조정</li>
+                        <li>사업 확장 계획 수립</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-teal-200">
+                        <p class="text-teal-700 font-bold">핵심 성과물</p>
+                        <p class="text-gray-700">정식 출시, 초기 매출 데이터, 향후 확장 계획</p>
+                    </div>
+                `
+            }
+        };
+        
+        document.getElementById('timelineDetail').classList.remove('hidden');
+        document.getElementById('timelineContent').innerHTML = `
+            <h3 class="text-2xl font-bold text-green-700 mb-4">${details[phase].title}</h3>
+            ${details[phase].content}
+        `;
+    };
+
     // 탭 콘텐츠 기능 (문제점과 개선방안 페이지에서 사용 가능)
     const tabButtons = document.querySelectorAll('.tab-button');
     
@@ -100,70 +224,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-// 통계 숫자 카운팅 애니메이션 (기대효과 페이지 등에서 사용 가능)
-const counters = document.querySelectorAll('.counter');
-
-if (counters.length > 0) {
-    counters.forEach(counter => {
-        const originalText = counter.innerText; // 예: "15%↑" 또는 "30분↑"
-        const targetValueString = counter.getAttribute('data-target');
-
-        // data-target 속성이 없거나 비어있으면 이 요소는 건너뜁니다.
-        if (targetValueString === null || targetValueString.trim() === '') {
-            console.error("'.counter' 요소에 'data-target' 속성이 없거나 비어있습니다:", counter);
-            return; // 다음 counter 요소로 넘어감
-        }
-
-        const targetValue = parseInt(targetValueString);
-
-        // targetValue가 숫자가 아니면 오류를 출력하고 건너뜁니다.
-        if (isNaN(targetValue)) {
-            console.error("'.counter' 요소의 'data-target' 속성 값이 올바른 숫자가 아닙니다:", counter);
-            // NaN 문제를 방지하기 위해 원래 텍스트를 그대로 둡니다.
-            return; 
-        }
-
-        // 단위 추출: 원래 텍스트에서 숫자, 점(.), 쉼표(,)를 모두 제거하고 남은 문자들 (양쪽 공백 제거)
-        // 예: "15%↑" 에서 "%↑" 추출, "30분↑" 에서 "분↑" 추출, "50억원↑" 에서 "억원↑" 추출
-        const unit = originalText.replace(/[0-9.,]/g, '').trim();
-
-        const duration = 2000; // 애니메이션 지속 시간 (밀리초)
-        // 목표값이 0인 경우 increment가 NaN 또는 Infinity가 될 수 있으므로 예외 처리
-        const increment = (targetValue === 0) ? 0 : targetValue / (duration / 16); // 60fps 기준
-        let current = 0;
-
-        const updateCounter = () => {
-            if (targetValue === 0) { // 목표값이 0이면 바로 0으로 설정하고 단위와 함께 표시 후 종료
-                counter.innerText = targetValue + unit;
-                return;
-            }
-
-            current += increment;
-
-            // 증가 애니메이션일 경우 current < targetValue, 감소 애니메이션일 경우 current > targetValue
-            if ((increment > 0 && current < targetValue) || (increment < 0 && current > targetValue)) {
-                counter.innerText = Math.ceil(current) + unit; // 현재 값에 단위를 붙여서 표시
-                requestAnimationFrame(updateCounter);
+    // 통계 숫자 카운팅 애니메이션
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // 카운팅 속도(ms)
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounters(), 1);
             } else {
-                counter.innerText = targetValue + unit; // 최종 목표 값에 단위를 붙여서 표시
+                counter.innerText = target;
             }
-        };
+        });
+    }
 
-        // 요소가 화면에 나타날 때만 카운팅 시작
-        const observer = new IntersectionObserver((entries, obs) => { // obs 추가
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // 애니메이션 시작 전에 0 또는 시작 값으로 설정 (선택 사항, 초기값 깜빡임 방지)
-                    // counter.innerText = '0' + unit; // 0으로 시작하려면 주석 해제
-                    updateCounter();
-                    obs.unobserve(entry.target); // 한 번 실행 후 관찰 중지 (obs 사용)
+    // 카운터 요소가 화면에 보일 때 애니메이션 시작
+    const observerConfig = {
+        threshold: 0.5,
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target.querySelector('.counter');
+                if (counter) {
+                    const startValue = 0;
+                    const endValue = parseInt(counter.getAttribute('data-target'));
+                    const duration = 1500;
+                    
+                    let startTime = null;
+                    
+                    function countUp(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+                        const currentValue = Math.floor(progress * (endValue - startValue) + startValue);
+                        
+                        counter.textContent = currentValue;
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(countUp);
+                        } else {
+                            counter.textContent = endValue;
+                        }
+                    }
+                    
+                    requestAnimationFrame(countUp);
                 }
-            });
-        }, { threshold: 0.1 }); // 화면에 10% 보일 때 시작 (조금 더 빨리 시작하도록 수정)
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, observerConfig);
 
-        observer.observe(counter);
+    document.querySelectorAll('.stat-item').forEach(item => {
+        counterObserver.observe(item);
     });
-}
 
     // 계절별 배경색 변경 (홈페이지 헤더 배경색을 계절에 맞게 변경)
     const heroSection = document.querySelector('.hero-section');
@@ -248,6 +367,31 @@ if (counters.length > 0) {
             button.classList.remove('shadow-lg');
         });
     });
+
+    // 예산 도넛 차트 초기화
+    const budgetCtx = document.getElementById('budgetChart');
+    if (budgetCtx) {
+        const budgetChart = new Chart(budgetCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['제품 R&D 및 품질 관리', '패키지 디자인 및 제작', '마케팅 및 홍보', '판매 인프라 구축'],
+                datasets: [{
+                    data: [30, 20, 30, 20],
+                    backgroundColor: ['#10B981', '#3B82F6', '#F59E0B', '#8B5CF6'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
 });
 
 // 페이지 로드 후 추가 스타일 적용을 위한 클래스 추가
