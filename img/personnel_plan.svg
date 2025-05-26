@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect x="0" y="0" width="800" height="400" fill="#f3f4f6" rx="12" />
+  
+  <!-- 타이틀 -->
+  <text x="400" y="50" font-family="Arial" font-size="22" fill="#065f46" text-anchor="middle" font-weight="bold">인력 지원 계획</text>
+  
+  <!-- 인력 그룹 1 - 전문가 팀 -->
+  <g transform="translate(200, 150)">
+    <!-- 배경 카드 -->
+    <rect x="-150" y="-70" width="300" height="250" rx="12" fill="white" stroke="#10b981" stroke-width="2" />
+    
+    <!-- 타이틀 -->
+    <text x="0" y="-40" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle" font-weight="bold">전문가 팀</text>
+    
+    <!-- 인력 아이콘들 -->
+    <g transform="translate(-90, 40)">
+      <circle cx="0" cy="0" r="30" fill="#3b82f6" />
+      <text x="0" y="0" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">🧪</text>
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="#1e40af" text-anchor="middle" font-weight="bold">알앤디 전문가</text>
+      <text x="0" y="70" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">2명</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+      <circle cx="0" cy="0" r="30" fill="#f59e0b" />
+      <text x="0" y="0" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">📱</text>
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="#b45309" text-anchor="middle" font-weight="bold">마케팅 전문가</text>
+      <text x="0" y="70" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">2명</text>
+    </g>
+    
+    <g transform="translate(90, 40)">
+      <circle cx="0" cy="0" r="30" fill="#8b5cf6" />
+      <text x="0" y="0" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">🚚</text>
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="#5b21b6" text-anchor="middle" font-weight="bold">유통 관리자</text>
+      <text x="0" y="70" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">3명</text>
+    </g>
+    
+    <!-- 직접 고용 라벨 -->
+    <rect x="-100" y="100" width="200" height="30" rx="15" fill="#10b981" />
+    <text x="0" y="120" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">직접 고용: 7명</text>
+  </g>
+  
+  <!-- 인력 그룹 2 - 청년 창업 일자리 -->
+  <g transform="translate(600, 150)">
+    <!-- 배경 카드 -->
+    <rect x="-150" y="-70" width="300" height="250" rx="12" fill="white" stroke="#3b82f6" stroke-width="2" />
+    
+    <!-- 타이틀 -->
+    <text x="0" y="-40" font-family="Arial" font-size="18" fill="#3b82f6" text-anchor="middle" font-weight="bold">청년 창업 및 일자리</text>
+    
+    <!-- 창업팀 아이콘 -->
+    <g transform="translate(-80, 20)">
+      <rect x="-50" y="-30" width="100" height="90" rx="8" fill="#dbeafe" />
+      <text x="0" y="0" font-family="Arial" font-size="24" fill="#1e40af" text-anchor="middle" font-weight="bold">🚀</text>
+      <text x="0" y="30" font-family="Arial" font-size="14" fill="#1e40af" text-anchor="middle" font-weight="bold">청년 창업</text>
+      <text x="0" y="50" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">연 5팀+</text>
+    </g>
+    
+    <!-- 일자리 아이콘 -->
+    <g transform="translate(80, 20)">
+      <rect x="-50" y="-30" width="100" height="90" rx="8" fill="#dbeafe" />
+      <text x="0" y="0" font-family="Arial" font-size="24" fill="#1e40af" text-anchor="middle" font-weight="bold">👨‍🍳</text>
+      <text x="0" y="30" font-family="Arial" font-size="14" fill="#1e40af" text-anchor="middle" font-weight="bold">식품 일자리</text>
+      <text x="0" y="50" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">청년 우선채용</text>
+    </g>
+    
+    <!-- 일자리 창출 효과 -->
+    <rect x="-120" y="85" width="240" height="65" rx="8" fill="#eff6ff" />
+    <text x="0" y="110" font-family="Arial" font-size="14" fill="#1e40af" text-anchor="middle" font-weight="bold">일자리 창출 효과</text>
+    <text x="-60" y="135" font-family="Arial" font-size="12" fill="#3b82f6" text-anchor="middle">직접: 50명+</text>
+    <text x="60" y="135" font-family="Arial" font-size="12" fill="#3b82f6" text-anchor="middle">간접: 200명+</text>
+  </g>
+  
+  <!-- 연계 화살표 -->
+  <path d="M350 150 L450 150" stroke="#10b981" stroke-width="3" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+  
+  <!-- 화살표 마커 정의 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981" />
+    </marker>
+  </defs>
+  
+  <!-- 하단 설명 -->
+  <rect x="150" y="340" width="500" height="50" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="2" />
+  <text x="400" y="370" font-family="Arial" font-size="16" fill="#065f46" text-anchor="middle" font-weight="bold">지역 중심의 지속가능한 일자리 생태계 구축</text>
+</svg>
